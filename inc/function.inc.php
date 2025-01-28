@@ -28,4 +28,14 @@
     }
     connexionBdd();
 
+    //FUNCTION 
+    function addCategorie(string $nom_categorie){
+        $pdo = connexionBdd();
+        $sql = "INSERT INTO categorie (nom_categorie) VALUES (:nom_categorie)";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ":nom_categorie" => $nom_categorie
+        ));
+    }
+
 ?>
