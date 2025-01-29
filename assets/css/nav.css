@@ -40,9 +40,27 @@ nav{
 .link-item:hover{
     text-decoration: underline;
 }
+
+/* POUR LA BARRE DE RECHERCHE  */
+.link-search{
+    width:200px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    /* outline: none; Enlève la bordure noire */
+}
+
 /* BOUTON BARRE DE NAVIGATION */
 .btn-search{
     margin-right: 15px;
+    width:120px;
+    padding: 4px;
+    border-radius:10px;
+    /* border-color:#ffeeee; */
+    border: 1px solid #ccc;
+    background-color: #ffeeee;
+    cursor: pointer;
+    /* outline: none; */
 }
 
 

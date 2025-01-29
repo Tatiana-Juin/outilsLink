@@ -41,6 +41,7 @@
             <form action="" method="POST">
                 <input type="text" class="link-search">
                 <input type="submit" value="Recherche" class="btn-search">
+                
             </form>
         </div>
 
