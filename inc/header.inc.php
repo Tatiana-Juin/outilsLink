@@ -27,13 +27,13 @@
 
         <!-- LOGO QUI MENE VERS TOUS LES OUTILS   -->
         <div class="logo">
-            <a href="" class="link-logo">outilsLink</a>
+            <a href="<?= RACINE_SITE."index.php"?>" class="link-logo">OutilsLink</a>
         </div>
 
         <!-- TOUS LES LIEN SAUF BARRE DE RCHERCHE  -->
         <div class="links">
             <a href="#" class="link-item">Ajout d'un outil</a>
-            <a href="#" class="link-item">Ajout d'une categorie </a>
+            <a href="<?=RACINE_SITE."ajoutCategorie.php" ?>" class="link-item">Ajout d'une categorie </a>
         </div>
 
         <!-- BARRE DE RECHERCHE  -->
