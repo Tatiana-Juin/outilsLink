@@ -11,8 +11,41 @@
     display: none;
 }
 
+/* NAV */
 nav{
     display: flex;
     width: 100vw;
-    border:1px solid blue;
+    /* border:1px solid blue; */
+    justify-content: space-between;
+    margin-top: 20px;
 }
+
+/* POUR TOUS LES LIEN LINK LOGO ET LINK ITEM */
+.link-logo,.link-item{
+    text-decoration: none;
+    color:black;
+    font-size:23px;
+    
+}
+/* POUR LE LOGO */
+.link-logo{
+    text-transform: capitalize;
+    margin-left:15px;
+}
+/* POUR LES LIEN DE NAVIGATION */
+.link-item{
+    margin-right:15px;
+}
+/* AU SURVOLE DE LA SOURIS  */
+.link-item:hover{
+    text-decoration: underline;
+}
+/* BOUTON BARRE DE NAVIGATION */
+.btn-search{
+    margin-right: 15px;
+}
+
+
+
+
+

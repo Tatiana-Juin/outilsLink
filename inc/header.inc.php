@@ -24,9 +24,14 @@
     
 
     <nav>
+
+        <!-- LOGO QUI MENE VERS TOUS LES OUTILS   -->
+        <div class="logo">
+            <a href="" class="link-logo">outilsLink</a>
+        </div>
+
         <!-- TOUS LES LIEN SAUF BARRE DE RCHERCHE  -->
         <div class="links">
-            <a href="#" class="link-item">Accueil</a>
             <a href="#" class="link-item">Ajout d'un outil</a>
             <a href="#" class="link-item">Ajout d'une categorie </a>
         </div>
