@@ -1,0 +1,18 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* POUR QUE LE MENU HAMBURGER DISPARAISSE */
+.hiden{
+    display: none;
+}
+
+nav{
+    display: flex;
+    width: 100vw;
+    border:1px solid blue;
+}

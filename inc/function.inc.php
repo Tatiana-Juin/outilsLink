@@ -28,7 +28,7 @@
     }
     connexionBdd();
 
-    //FUNCTION 
+    //FUNCTION POUR AJOUTER UNE CATEGORIE 
     function addCategorie(string $nom_categorie){
         $pdo = connexionBdd();
         $sql = "INSERT INTO categorie (nom_categorie) VALUES (:nom_categorie)";
