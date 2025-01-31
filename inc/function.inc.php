@@ -38,4 +38,17 @@
         ));
     }
 
+    // FONCTION POUR TROUVER UNE CATEGORIE PAR RAPPORT A SON NOM
+    function showCategorieName(string $nom_categorie){
+        $pdo = connexionBdd();
+        $sql = "SELECT id_categorie FROM categorie WHERE nom_categorie = :nom_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ":nom_categorie" => $nom_categorie
+        ));
+        $resultat = $requete->fetch();
+        return $resultat;
+    } 
+   
+
 ?>
