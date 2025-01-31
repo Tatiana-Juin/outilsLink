@@ -50,5 +50,13 @@
         return $resultat;
     } 
    
+    // FONCTION POUR VOIR TOUS LES NOM DES CATEGORIES 
+    function allCategorie(){
+        $pdo = connexionBdd();
+        $sql =" SELECT nom_categorie FROM categorie";
+        $requete =$pdo->query($sql);
+        $resultat = $requete->fetchAll();
+        return $resultat;
+    }
 
 ?>
