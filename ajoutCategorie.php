@@ -11,7 +11,8 @@
 
         <form action="" method="POST">
             <label for="nom_categorie">Nom categorie</label>
-            <input type="text" name="nom_categorie" id="nom_categorie" class="nom_categorie">   
+            <input type="text" name="nom_categorie" id="nom_categorie" class="nom_categorie">  
+            <input type="submit" value="btn_categorie" id="btn_categorie" class="btn_categorie"> 
         </form>
 
     </div>
