@@ -17,30 +17,28 @@
 <body>
     
 <header >
-    
-    
-    
-    
 
     <nav>
-        <!-- POUR LE MENU HAMBURGER  -->
-        <div class="hamburger">
-            <i class="bi bi-list hiden"></i>
-        </div>
         
+
         <!-- LOGO QUI MENE VERS TOUS LES OUTILS   -->
-        <div class="logo">
+        <div class="logo ">
             <a href="<?= RACINE_SITE."index.php"?>" class="link-logo">OutilsLink</a>
         </div>
 
+        <!-- POUR LE MENU HAMBURGER  -->
+        <div class="hamburger" id="hamburger">
+            <i class="bi bi-list "></i>
+        </div>
+
         <!-- TOUS LES LIEN SAUF BARRE DE RCHERCHE  -->
-        <div class="links">
+        <div class="links nav-link">
             <a href="#" class="link-item">Ajout d'un outil</a>
             <a href="<?=RACINE_SITE."ajoutCategorie.php" ?>" class="link-item">Ajout d'une categorie </a>
         </div>
 
         <!-- BARRE DE RECHERCHE  -->
-        <div class="search">
+        <div class="search search-bar">
             <form action="" method="POST">
                 <input type="text" class="link-search">
                 <input type="submit" value="Recherche" class="btn-search">

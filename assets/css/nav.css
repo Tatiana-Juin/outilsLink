@@ -7,9 +7,9 @@
 }
 
 /* POUR QUE LE MENU HAMBURGER DISPARAISSE */
-.hiden{
+/* .hiden{
     display: none;
-}
+} */
 
 
 
@@ -23,6 +23,11 @@ nav{
     background-color: #E8EFFC;
 }
 
+/* POUR LE MENU HAMBURGER  */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
 /* POUR TOUS LES LIEN LINK LOGO ET LINK ITEM */
 .link-logo,.link-item{
     text-decoration: none;
@@ -81,7 +86,56 @@ nav{
     margin-bottom: 20px;
 }
 
+@media screen and (max-width:870px){
+   /* CHANGER l'ESPACEMENT ENTRE LOGO ET MENU HAMBURGER */
+   nav{
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+    }
 
+    /* BOUTON HAMBURGER APPARAIT  */
+   .hamburger{
+        display: flex;
+   }
+
+   
+
+   /* POUR FAIRE DISPARAITRE TOUS LES BOUTON DE LA NAVIGATION */
+   .nav-link{
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+   }
+
+   /* POUR LE BOUTON FERMER */
+   .bi-x-circle,.bi-list{
+        font-size:40px;
+        margin-top: 3px;
+    }
+    /* 1ER ELEMENT A UN ESPACE DE 60PX  */
+    .link-item:first-child{
+        margin-top: 60px !important;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* pour tous les lien */
+    .link-item{
+        margin-bottom: 5px;
+    }
+    /* POUR LA BARRE DE RECHERCHE  */
+    .search-bar {
+        display: none;
+    }
+    
+
+    
+}
 
 
 
