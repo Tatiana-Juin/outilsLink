@@ -11,13 +11,16 @@
     display: none;
 }
 
+
+
 /* NAV */
 nav{
     display: flex;
     width: 100vw;
     /* border:1px solid blue; */
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: space-around;
+    
+    background-color: #E8EFFC;
 }
 
 /* POUR TOUS LES LIEN LINK LOGO ET LINK ITEM */
@@ -25,15 +28,27 @@ nav{
     text-decoration: none;
     color:black;
     font-size:23px;
+    display: inline-block;
+    margin-bottom: 20px;
+    /* border:1px solid blue; */
+    
     
 }
 /* POUR LE LOGO */
 .link-logo{
-    margin-left:15px;
+    /* margin-left:15px; */
+    /* margin: 20px 0 0 15px; */
+    margin-top: 20px;
+    /* gap:15px; */
 }
 /* POUR LES LIEN DE NAVIGATION */
 .link-item{
-    margin-right:15px;
+    /* margin-right:15px; */
+    margin-top : 20px ;
+}
+
+.link-item:nth-child(1){
+    margin-right: 15px;
 }
 /* AU SURVOLE DE LA SOURIS  */
 .link-item:hover{
@@ -46,6 +61,8 @@ nav{
     padding: 4px;
     border-radius: 10px;
     border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom:20px;
     /* outline: none; Enlève la bordure noire */
 }
 
@@ -60,6 +77,8 @@ nav{
     background-color: #ffeeee;
     cursor: pointer;
     /* outline: none; */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 

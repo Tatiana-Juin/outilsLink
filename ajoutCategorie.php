@@ -5,9 +5,9 @@
 ?>
 
  <main>
-    <h1>Ajout d'une categorie </h1>
+    <h1 class="title-page">Ajout d'une categorie </h1>
 
-    <div class="div_categorie">
+    <div class="div-categorie">
 
         <form action="" method="POST">
             <label for="nom_categorie">Nom categorie</label>

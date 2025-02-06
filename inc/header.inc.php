@@ -18,14 +18,16 @@
     
 <header >
     
-    <!-- POUR LE MENU HAMBURGER  -->
-    <div class="hamburger">
-        <i class="bi bi-list hiden"></i>
-    </div>
+    
+    
     
 
     <nav>
-
+        <!-- POUR LE MENU HAMBURGER  -->
+        <div class="hamburger">
+            <i class="bi bi-list hiden"></i>
+        </div>
+        
         <!-- LOGO QUI MENE VERS TOUS LES OUTILS   -->
         <div class="logo">
             <a href="<?= RACINE_SITE."index.php"?>" class="link-logo">OutilsLink</a>
