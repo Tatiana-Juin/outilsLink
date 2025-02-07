@@ -2,11 +2,7 @@
      $titre="Ajout d'un outil";
      require_once("inc/function.inc.php");
      require_once("inc/header.inc.php");
-    //COUNT ID_CATEGORIE POUR AFFICHER UN MESSAGE ERREUR ET FORCER A ENDROIT UNE CATEGORIE AVANT D'INSERER 
-    //  $countIdsCategories = countIdCategorie();
-    //  foreach($countIds as $key => $count){
-    //     echo " La valeur: $count";  // Affiche la clé et la valeur
-    //  }
+    
     
     $erreur = "";
     if(!empty($_POST)){
