@@ -18,7 +18,48 @@ main{
     text-align: center;
     margin-top: 20px;
     font-size: 27px;
+    color: #3F4574;
 }
+
+/* FORMULAIRE POUR AJOUTER UNE CATEGORIE  */
+.add_categorie{
+    display: flex;
+    flex-direction: column;
+}
+
+/* STYLE DU LABEL DU FORMULAIRE AJOUT D'UNE CATEGORIE */
+.label_categorie{
+    margin-top:15px;
+    font-size:20px;
+}
+
+/* STYLE DU CHAMPS DE TEXTE POUR AJOUTER LE STYLE  */
+.input_categorie{
+    margin-top:15px;
+    width:300px;
+    height:27px;
+}
+/* STYlE DU BOUTON */
+ .btn_categorie{
+    margin-top: 15px;
+    width:150px;
+    
+    padding: 6px;
+    border-radius:10px;
+    /* border-color:#ffeeee; */
+    border: 1px solid #ccc;
+    background-color: #ffeeee;
+    cursor: pointer;
+    /* outline: none; */
+   
+ }
+/* EN CAS D'ECHEC */
+ .echec{
+    margin-top:15px;
+    font-size: 28px;
+    color:red;
+    font-weight: bolder;
+ }
 
 
 
