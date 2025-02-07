@@ -8,9 +8,9 @@
     <!-- TITRE DE LA PAGE  -->
     <h1 class="title-page">Ajout d'une categorie </h1>
 
-    <div class="div-categorie">
+    <div class="divCategorie">
 
-        <!-- AJOUT D'UN MESSAGE SI CELA EST UN SUCCESS -->
+        <!-- AJOUT D'UN MESSAGE SI CELA EST UN -->
         <p class="ajout-success"></p>
 
         <form action="" method="POST">
