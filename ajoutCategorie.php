@@ -5,9 +5,13 @@
 ?>
 
  <main>
+    <!-- TITRE DE LA PAGE  -->
     <h1 class="title-page">Ajout d'une categorie </h1>
 
     <div class="div-categorie">
+
+        <!-- AJOUT D'UN MESSAGE SI CELA EST UN SUCCESS -->
+        <p class="ajout-success"></p>
 
         <form action="" method="POST">
             <label for="nom_categorie">Nom categorie</label>
