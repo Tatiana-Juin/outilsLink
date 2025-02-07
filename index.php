@@ -4,12 +4,18 @@
     require_once "inc/function.inc.php";
     //POUR LE HEADER    
     require_once "inc/header.inc.php";
+    $allOutils = allOutil();
     
 ?>
 
 <main>
     
+    <?php foreach ($allOutils as $key => $allOutil){ ?>
+        <p><?= $allOutil['nom_outil'] ?> </p>
+        <a href="<?=$allOutil['url_outil']?>" target="_blank"> Lien de <?= $allOutil['nom_outil'] ?></a>
+        <p><?= $allOutil['nom_categorie'] ?></p>
 
+    <?php } ?>
 
 </main>
 

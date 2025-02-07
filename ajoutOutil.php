@@ -8,7 +8,51 @@
     //     echo " La valeur: $count";  // Affiche la clé et la valeur
     //  }
     
+    $erreur = "";
+    if(!empty($_POST)){
+        $verif = true; 
 
+        foreach($_POST as $cle => $valeur){
+            if(empty(trim($valeur))){
+                $verif = false;
+            }
+        }
+
+        if(!$verif){
+            $erreur = "Veuillez remplir tous les champs";
+            //tous est rempli
+        }else{
+
+            $nom_outil = trim($_POST['nom_outil']);
+            $url_outil = trim($_POST['url_outil']);
+            $categorie = trim($_POST['categories_select']);
+
+            //nom outil 
+            if(!isset($nom_outil) || strlen($nom_outil) < 2 && strlen($nom_outil) > 255 ){
+                $erreur += "Le nom n'est pas valide ";
+            }
+
+            if(!isset($url_outil) || strlen($url_outil) < 2 && strlen($url_outil) > 255 ){
+                $erreur += "L'url  n'est pas valide ";
+            }
+
+            if(empty($erreur)){
+                $nom_outil = htmlentities($nom_outil);
+                $url_outil = htmlentities($url_outil);
+                $categorie = htmlentities($categorie);
+
+                $idCategorie = showCategorieName($categorie);
+                $categorie_id = $idCategorie['id_categorie'];
+
+                $ajout_outil = addOutil($categorie_id,$nom_outil,$url_outil);
+
+                header("location:".RACINE_SITE."index.php");
+            }
+
+
+
+        }
+    }
 
 ?>
 
@@ -17,12 +61,13 @@
         <h1 class="title-page">Ajout d'un outil </h1>
         
         <div class="div-outil">
+
             <!-- ON VERIFIE SI IL EXISTE DES CATEGORIE . SI LE NB EST 0 ALORS ON OBLIGE L'UTILISATEUR  A SAISIR UNE CATEGORIE  -->
             <?php 
                     $countIdsCategories = countIdCategorie(); 
                     foreach($countIdsCategories as $key => $countIdCategorie){
                         if($countIdCategorie == 0){
-                            $info = "Pour ajouter un outil il faut d'abord avec une categorie";
+                            $info = "Pour ajouter un outil il faut d'abord avoir au moins  une categorie";
             ?>
             
                     <!-- AJOUT D'UN MESSAGE ERREUR  -->
@@ -35,7 +80,7 @@
             <?php  }else{ ?>
 
                     <form action="" method="POST" class="add_outil">
-                        <p class="echec"> </p>
+                        <p class="echec"> <?= $erreur ?> </p>
                     <!-- NOM D'UN OUTIL -->
                     <label for="nom_outil" class="label_outil">Nom </label>
                     <input type="text" name="nom_outil" id="nom_outil" class="nom_outil ">
@@ -58,7 +103,7 @@
                         <?php } ?>
 
                     </select>
-                    
+
                     <!-- BTN AJOUT OUTILS -->
                     <input type="submit" value="ajouter" id="btn_outil" class="btn_outil">
                     

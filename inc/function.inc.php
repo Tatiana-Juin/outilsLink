@@ -69,4 +69,29 @@
        
     }
 
+    
+
+    //FONCTION POUR AJOUTER UN OUTIL 
+    function addOutil(int $id_categorie, string $nom_outil,string $url_outil){
+        $pdo = connexionBdd();
+        $sql = "INSERT INTO outil (id_categorie,nom_outil,url_outil) VALUES (:id_categorie, :nom_outil,:url_outil)";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_categorie' => $id_categorie,
+            ':nom_outil' => $nom_outil,
+            ':url_outil' => $url_outil
+        ));
+    }
+    
+    //FONCTION POUR VOIR TOUS LES OUTILS 
+     function allOutil(){
+        $pdo = connexionBdd();
+        $sql ="SELECT  nom_outil,url_outil,nom_categorie FROM outil,categorie WHERE categorie.id_categorie = outil.id_categorie";
+        $requete = $pdo->query($sql);
+        $resultat = $requete->fetchAll();
+        return $resultat;
+
+     }
+
+
 ?>
