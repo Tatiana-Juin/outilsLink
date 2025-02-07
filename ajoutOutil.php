@@ -26,9 +26,21 @@
                   <label for="url_outil" class="label_url">url </label>
                   <input type="text" name="url_outil" id="url_outil" class="url_outil">
 
-                  <!-- BTN AJOUT OUTILS -->
-                   <input type="submit" value="ajouter" id="btn_outil" class="btn_outil">
+                <!-- TOUTE LES CATEGORIE -->
+                <?php 
+                     $categories = allCategorie();
+                ?>
+                <label for="categories_select" class="label_categorie">  Categories</label>
+                <select name="categories_select" id="categorie_select">
+                    <option value="">-- Choisi une categorie --</option>
+                    <?php foreach($categories as $key =>$categorie){ ?>
+                        <option value="<?=$categorie['nom_categorie'] ?>"> <?= $categorie['nom_categorie'] ?> </option>
+                    <?php } ?>
 
+                </select>
+                <!-- BTN AJOUT OUTILS -->
+                <input type="submit" value="ajouter" id="btn_outil" class="btn_outil">
+                
             </form>
 
         </div>
