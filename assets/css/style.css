@@ -22,26 +22,26 @@ main{
 }
 
 /* FORMULAIRE POUR AJOUTER UNE CATEGORIE  */
-.add_categorie{
+.add_categorie,.add_outil{
     display: flex;
     flex-direction: column;
 }
 
 /* STYLE DU LABEL DU FORMULAIRE AJOUT D'UNE CATEGORIE */
-.label_categorie{
+.label_categorie,.label_outil,.label_url{
     margin-top:15px;
     font-size:20px;
 }
 
 /* STYLE DU CHAMPS DE TEXTE POUR AJOUTER LE STYLE  */
-.nom_categorie{
+.nom_categorie,.nom_outil,.url_outil{
     margin-top:15px;
     width:300px;
     height:27px;
 }
 
 /* STYlE DU BOUTON */
- .btn_categorie{
+ .btn_categorie,.btn_outil{
     margin-top: 15px;
     width:150px;
     
@@ -61,6 +61,8 @@ main{
     color:red;
     font-weight: bolder;
  }
+ 
+ /******* PAGE AJOUT OUTILS   ****** **/
 
 
 

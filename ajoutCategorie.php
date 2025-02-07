@@ -49,7 +49,7 @@
 
     <div class="div-Categorie">
 
-        <!-- AJOUT D'UN MESSAGE SI CELA EST UN -->
+        <!-- AJOUT D'UN MESSAGE SI CELA EST UNE ERREUR -->
         <p class="echec"> <?= $info; ?></p>
 
         <form action="" method="POST" class="add_categorie">
