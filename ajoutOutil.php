@@ -2,6 +2,12 @@
      $titre="Ajout d'un outil";
      require_once("inc/function.inc.php");
      require_once("inc/header.inc.php");
+    //COUNT ID_CATEGORIE POUR AFFICHER UN MESSAGE ERREUR ET FORCER A ENDROIT UNE CATEGORIE AVANT D'INSERER 
+    //  $countIdsCategories = countIdCategorie();
+    //  foreach($countIds as $key => $count){
+    //     echo " La valeur: $count";  // Affiche la clé et la valeur
+    //  }
+    
 
 
 ?>
@@ -11,37 +17,59 @@
         <h1 class="title-page">Ajout d'un outil </h1>
         
         <div class="div-outil">
+            <!-- ON VERIFIE SI IL EXISTE DES CATEGORIE . SI LE NB EST 0 ALORS ON OBLIGE L'UTILISATEUR  A SAISIR UNE CATEGORIE  -->
+            <?php 
+                    $countIdsCategories = countIdCategorie(); 
+                    foreach($countIdsCategories as $key => $countIdCategorie){
+                        if($countIdCategorie == 0){
+                            $info = "Pour ajouter un outil il faut d'abord avec une categorie";
+            ?>
             
-            <!-- AJOUT D'UN MESSAGE ERREUR  -->
-            <p class="echec"></p>
+                    <!-- AJOUT D'UN MESSAGE ERREUR  -->
+                    <p class="echec"> <?= $info ?></p>
+                    <a href="<?=RACINE_SITE."ajoutCategorie.php" ?>">Ajouter une categorie</a>
+
+                
+
+            <!-- SINON IL EXISTE DEJA UNE OU PLUSIEURS CATEGORIE  -->
+            <?php  }else{ ?>
+
+                    <form action="" method="POST" class="add_outil">
+                        <p class="echec"> </p>
+                    <!-- NOM D'UN OUTIL -->
+                    <label for="nom_outil" class="label_outil">Nom </label>
+                    <input type="text" name="nom_outil" id="nom_outil" class="nom_outil ">
+
+                    <!-- url -->
+                    <label for="url_outil" class="label_url">url </label>
+                    <input type="text" name="url_outil" id="url_outil" class="url_outil">
+
+                    <!-- TOUTE LES CATEGORIE -->
+                    <?php 
+                        $categories = allCategorie();
+                        
+                    ?>
+                    <label for="categories_select" class="label_categorie">  Categories</label>
+                    <select name="categories_select" id="categorie_select">
+
+                        <option value="">-- Choisi une categorie --</option>
+                        <?php foreach($categories as $key =>$categorie){ ?>
+                            <option value="<?=$categorie['nom_categorie'] ?>"> <?= $categorie['nom_categorie'] ?> </option>
+                        <?php } ?>
+
+                    </select>
+                    
+                    <!-- BTN AJOUT OUTILS -->
+                    <input type="submit" value="ajouter" id="btn_outil" class="btn_outil">
+                    
+                </form>
+                            
+            <?php       }
+            }
+        ?>
 
              <!-- FORMULAIRE AJOUT OUTILS  -->
-            <form action="" method="POST" class="add_outil">
-
-                <!-- NOM D'UN OUTIL -->
-                 <label for="nom_outil" class="label_outil">Nom </label>
-                 <input type="text" name="nom_outil" id="nom_outil" class="nom_outil">
-
-                 <!-- url -->
-                  <label for="url_outil" class="label_url">url </label>
-                  <input type="text" name="url_outil" id="url_outil" class="url_outil">
-
-                <!-- TOUTE LES CATEGORIE -->
-                <?php 
-                     $categories = allCategorie();
-                ?>
-                <label for="categories_select" class="label_categorie">  Categories</label>
-                <select name="categories_select" id="categorie_select">
-                    <option value="">-- Choisi une categorie --</option>
-                    <?php foreach($categories as $key =>$categorie){ ?>
-                        <option value="<?=$categorie['nom_categorie'] ?>"> <?= $categorie['nom_categorie'] ?> </option>
-                    <?php } ?>
-
-                </select>
-                <!-- BTN AJOUT OUTILS -->
-                <input type="submit" value="ajouter" id="btn_outil" class="btn_outil">
-                
-            </form>
+            
 
         </div>
 

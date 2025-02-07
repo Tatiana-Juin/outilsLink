@@ -59,4 +59,14 @@
         return $resultat;
     }
 
+    //FONCTION QUI COMPTE LE NB DE ID 
+    function countIdCategorie(){
+        $pdo = connexionBdd();
+        $sql = "SELECT COUNT(id_categorie) FROM categorie";
+        $requete = $pdo->query($sql);
+        $resultat = $requete->fetch();
+        return $resultat;
+       
+    }
+
 ?>
