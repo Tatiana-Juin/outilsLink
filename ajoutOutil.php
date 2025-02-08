@@ -16,6 +16,7 @@
 
         if(!$verif){
             $erreur = "Veuillez remplir tous les champs";
+            
             //tous est rempli
         }else{
 

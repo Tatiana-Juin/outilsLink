@@ -8,9 +8,11 @@
     
 ?>
 
-<main>
-    
-    <?php foreach ($allOutils as $key => $allOutil){ ?>
+<main class="afficheOutils ">
+        <!-- BOUCLE POUR AFFICHER TOUS LES OUTILS  -->
+         <h1 class="title-page">Afficher tous les outils </h1>
+
+        <?php foreach ($allOutils as $key => $allOutil){ ?>
         <p><?= $allOutil['nom_outil'] ?> </p>
         <a href="<?=$allOutil['url_outil']?>" target="_blank"> Lien de <?= $allOutil['nom_outil'] ?></a>
         <p><?= $allOutil['nom_categorie'] ?></p>
