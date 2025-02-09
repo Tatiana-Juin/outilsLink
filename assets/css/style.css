@@ -7,10 +7,11 @@
 /***** *********PAGE AJOUT CATEGORIE ********************* *****/
 
 /* ELEMENT CONTENANT TOUTE LA PAGE  */
-main{
+.ajout_categorie,.ajout_outil{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 /* TITRE DE LA PAGE  */
@@ -66,6 +67,28 @@ main{
 #categorie_select{
     margin-top:15px;
 }
+
+/* ****** *** STYLE PAGE INDEX  ****** */
+.card_container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-direction: row;
+}
+
+.card{
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+    margin : 10px;
+    padding: 10px; 
+    
+   
+}
+
 
 
 

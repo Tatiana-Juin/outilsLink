@@ -53,7 +53,7 @@
 
 ?>
 
-    <main>
+    <main class="ajout_outil">
 
         <h1 class="title-page">Ajout d'un outil </h1>
         

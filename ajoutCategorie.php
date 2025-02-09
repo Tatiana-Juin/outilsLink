@@ -43,7 +43,7 @@
 
 ?>
 
- <main>
+ <main class="ajout_categorie">
     <!-- TITRE DE LA PAGE  -->
     <h1 class="title-page">Ajout d'une categorie </h1>
 
