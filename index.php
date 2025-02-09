@@ -17,9 +17,14 @@
     
             <?php foreach ($allOutils as $key => $allOutil){ ?>
                 <div class="card">
-                    <p><?= $allOutil['nom_outil'] ?> </p>
-                    <a href="<?=$allOutil['url_outil']?>" target="_blank"> Lien de <?= $allOutil['nom_outil'] ?></a>
-                    <p><?= $allOutil['nom_categorie'] ?></p>
+                    <!-- POUR LE NOM DE L'OUTIL -->
+
+                    <a href="<?=$allOutil['url_outil']?>" target="_blank" class="affiche_btn_outil">  
+                        <p class="affiche_nom_outil"><?= $allOutil['nom_outil'] ?> </p>
+                    </a>
+
+                    <!-- NOM DE LA CATEGORIE  -->
+                    <p class="affiche_categorie"><?= $allOutil['nom_categorie'] ?></p>
 
                 </div>
 
