@@ -39,11 +39,16 @@
 
         <!-- BARRE DE RECHERCHE  -->
         <div class="search search-bar">
-            <form action="" method="POST">
-                <input type="text" class="link-search">
-                <input type="submit" value="Recherche" class="btn-search">
-                
-            </form>
+        <!-- POUR L'INSTANT FAIRE APPARAITRE QUE SUR INDEX  -->
+            <?php if(str_contains($_SERVER['PHP_SELF'],"index.php")){ ?>
+                    <form action="<?=RACINE_SITE?>index.php" method="POST" role="search"> 
+                        <input type="search" class="link-search" name="recherche">
+                        <input type="submit" value="Recherche" class="btn-search">
+                        
+                    </form>
+            
+            <?php } ?>
+
         </div>
 
     </nav>   
