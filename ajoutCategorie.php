@@ -45,9 +45,9 @@
 
  <main class="ajout_categorie">
     <!-- TITRE DE LA PAGE  -->
-    <h1 class="title-page">Ajout d'une categorie </h1>
+    <h1 class="title_page">Ajout d'une categorie </h1>
 
-    <div class="div-Categorie">
+    <div class="div_categorie">
 
         <!-- AJOUT D'UN MESSAGE SI CELA EST UNE ERREUR -->
         <p class="echec"> <?= $info; ?></p>

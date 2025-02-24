@@ -1,3 +1,4 @@
+/* RESET */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,11 +12,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
     
 }
 
 /* TITRE DE LA PAGE  */
-.title-page{
+.title_page{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -126,6 +128,32 @@
     text-align: center;
 
 }
+
+/* ****************PAGE CATEGORIE *********** */
+.container_categorie{
+    display: flex;
+    flex-direction: column;
+    /* border:1px solid red; */
+}
+
+/* DIV CONTENANT LE BOUTON PLUS  */
+.div_icon_categorie{
+    display: flex;
+    justify-content: flex-end;
+    /* border:1px solid blue; */
+    
+}
+
+/* LIEN POUR LE BOUTON + QUI PERMET D'AVOIR ACCES A AJOUT CATEGORIE */
+.link_icon_categorie{
+    margin-right: 300px;
+    font-size: 27px;
+    color: #3F4574;
+}
+
+
+
+
 
 
 

@@ -34,7 +34,7 @@
         <!-- TOUS LES LIEN SAUF BARRE DE RCHERCHE  -->
         <div class="links nav-link">
             <a href="<?=RACINE_SITE."ajoutOutil.php"?>" class="link-item">Ajout d'un outil</a>
-            <a href="<?=RACINE_SITE."ajoutCategorie.php" ?>" class="link-item">Ajout d'une categorie </a>
+            <a href="<?=RACINE_SITE."categorie.php" ?>" class="link-item">Categorie </a>
         </div>
 
         <!-- BARRE DE RECHERCHE  -->
