@@ -86,7 +86,7 @@
     //FONCTION POUR VOIR TOUS LES OUTILS 
      function allOutil(){
         $pdo = connexionBdd();
-        $sql ="SELECT  nom_outil,url_outil,nom_categorie FROM outil,categorie WHERE categorie.id_categorie = outil.id_categorie";
+        $sql ="SELECT  nom_outil,url_outil,nom_categorie FROM outil,categorie WHERE categorie.id_categorie = outil.id_categorie ORDER BY id_outil DESC";
         $requete = $pdo->query($sql);
         $resultat = $requete->fetchAll();
         return $resultat;
