@@ -45,7 +45,9 @@
             <?php if(!empty($allOutils)){ 
                 // POUR AFFICHER LE BOUTON RETOUR QUI REVIENS EN ARRIERE SANS LA RECHERCHE 
                 if($motExiste ===true){ ?>
-                     <a href="<?=RACINE_SITE ?>index.php">retour</a>
+                     <a href="<?=RACINE_SITE ?>index.php">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
                 <?php
                 }
                 // POUR AFFICHER LE MESSAGE ERREUR IL SUFFIT DE FAIRE UN ELSE ET DEMETTRE UN PARAGRAPHE EN APPELLANT $INFO PAR CONTRE IL FAUT REFAIRE LE STYLE CAR CELA S'AFFICHE A COTER ET NON EN DESSOUS JE PENSE QU'IL FAUT AJOUTER UNE DIV 

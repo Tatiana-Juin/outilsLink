@@ -47,10 +47,11 @@
     <!-- TITRE DE LA PAGE  -->
     <h1 class="title_page">Ajout d'une categorie </h1>
 
-    <div class="div_categorie">
+    
 
+    <div class="div_categorie">
         <!-- AJOUT D'UN MESSAGE SI CELA EST UNE ERREUR -->
-        <p class="echec"> <?= $info; ?></p>
+        <p class="echec"> <?= $info; ?></p> 
 
         <form action="" method="POST" class="add_categorie">
             <!-- NOM D'UNE CATEGORIE -->
