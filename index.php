@@ -38,7 +38,7 @@
 
 <main class="affiche_outil ">
         <!-- BOUCLE POUR AFFICHER TOUS LES OUTILS  -->
-    <h1 class="title-page">Afficher tous les outils </h1>
+    <h1 class="title_page">Afficher tous les outils </h1>
 
     <div class="card_container">
 

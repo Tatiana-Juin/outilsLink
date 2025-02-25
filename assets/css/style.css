@@ -114,6 +114,7 @@
     color:black;
 }
 
+/* BOUTON POUR LA CATEGORIE  */
 .affiche_categorie{
 
     margin-right: 15px;
@@ -149,6 +150,30 @@
     margin-right: 300px;
     font-size: 27px;
     color: #3F4574;
+}
+
+/* DIV CONTENANT TOUTES LES CATEGORIES  */
+.div_all_categories{
+    display: flex;
+    /* border:1px solid blue; */
+    width: 60vw;
+   margin: auto;
+}
+
+/* POUR LE LIEN DES CATEGORIES  */
+.link_categorie{
+    /* display: flex; */
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    /* width:150px; */
+    padding: 10px; 
+    border-radius:10px;
+    border-color:#ffeeee;
+    border: 1px solid #ccc;
+    background-color: #ffeeee;
+    margin-top: 10px;
+    /* text-align: center; */
 }
 
 
