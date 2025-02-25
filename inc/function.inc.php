@@ -69,7 +69,7 @@
        
     }
 
-    // FONCTION QUI PERMET D'AFFICHER UNE CATEGORIE 
+    // FONCTION QUI PERMET D'AFFICHER UNE CATEGORIE PAR RAPPORT A ID DE LA CATEGORIE 
     function categorieById(int $id_categorie){
         $pdo = connexionBdd();
         $sql = "SELECT nom_categorie FROM categorie WHERE id_categorie = :id_categorie";
