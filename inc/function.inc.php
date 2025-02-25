@@ -69,6 +69,17 @@
        
     }
 
+    // FONCTION QUI PERMET D'AFFICHER UNE CATEGORIE 
+    function categorieById(int $id_categorie){
+        $pdo = connexionBdd();
+        $sql = "SELECT nom_categorie FROM categorie WHERE id_categorie = :id_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ":id_caegorie" =>$id_categorie
+        ));
+        $resultat = $requete->fetch();
+        return $resultat;
+    }
     
 
     //FONCTION POUR AJOUTER UN OUTIL 
