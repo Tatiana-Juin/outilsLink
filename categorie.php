@@ -25,7 +25,7 @@
 
         <?php foreach($allCategories as $key => $allCategorie){ ?>
 
-            <a href="#" class="link_categorie"><?=$allCategorie["nom_categorie"]?></a>
+            <a href="<?=RACINE_SITE?>uneCategorie.php?action=voir&idCategorie=<?=$allCategorie['id_categorie']?>" class="link_categorie"><?=$allCategorie["nom_categorie"]?></a>
 
         <?php } ?>
 
