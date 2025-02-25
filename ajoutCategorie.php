@@ -35,7 +35,7 @@
                 //Appelle de la fonction
                 $resultat = addCategorie($nom_categorie);
 
-                 header("location:".RACINE_SITE."index.php");
+                 header("location:".RACINE_SITE."categorie.php");
               
            }
         }

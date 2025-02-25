@@ -93,6 +93,18 @@
 
      }
 
+    //  FONCTION POUR AFFICHER LES OUTILS PAR RAPPORT A LA CATEGORIE 
+     function allOutilCategory(int $id_categorie){
+        $pdo = connexionBdd();
+        $sql = "SELECT nom_outil, url_outil FROM outil WHERE id_categorie = :id_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ":id_categorie" =>$id_categorie
+        ));
+        $resultat = $requete->fetchAll();
+        return $resultat;
+     }
+
     //  FONCTION POUR LA BARRE DE RECHERCHE 
     function searchOutil(string $outil){
         $pdo = connexionBdd();
