@@ -24,9 +24,9 @@
 
 ?>
 
-<main>
+<main class="une_categorie">
 
-    
+    <h1 class="title_page"> <?= $nomCategorie['nom_categorie'] ?> </h1>
 
 </main>
 
