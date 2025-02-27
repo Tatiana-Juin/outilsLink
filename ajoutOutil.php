@@ -35,13 +35,14 @@
 
             if(empty($erreur)){
                 $nom_outil = htmlentities($nom_outil);
+                $nom_outil_min = strtolower($nom_outil);
                 $url_outil = htmlentities($url_outil);
                 $categorie = htmlentities($categorie);
 
                 $idCategorie = showCategorieName($categorie);
                 $categorie_id = $idCategorie['id_categorie'];
 
-                $ajout_outil = addOutil($categorie_id,$nom_outil,$url_outil);
+                $ajout_outil = addOutil($categorie_id,$nom_outil_min,$url_outil);
 
                 header("location:".RACINE_SITE."index.php");
             }

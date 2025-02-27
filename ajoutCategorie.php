@@ -32,8 +32,17 @@
            // S'IL N'Y A PAS D'ERREUR 
            if(empty($info)){
                 $nom_categorie = htmlentities($nom_categorie);
+                $nom_categorie_min = strtolower($nom_categorie);
+               /*
+                    AVANT IL FAUT VERIFIER QUE LE NOM DE LA CATEGORIE EXISTE PAS 
+                    POUR CELA IL FAUT APPELLER LA FONCTION allCategorie 
+                    -FAIRE UNE BOUCLE OU ON VERIFIE QUE LE NOM N'EST PAS EGALE A UN NOM DE CATEGORIE EXISTANT 
+                    -SI  BOOLEAN TRUE ALORS ON AFFICHE UN MESSAGE DISANT QUE CETTE CATEGORIE EXISTE SINON BOOLEAN FALSE ET ON APPELLE LA FONCTION 
+                    - IL FAUT FORCER A CE QUE L'INSERTION SOIT EN MINUSCULE 
+               */
+
                 //Appelle de la fonction
-                $resultat = addCategorie($nom_categorie);
+                $resultat = addCategorie($nom_categorie_min);
 
                  header("location:".RACINE_SITE."categorie.php");
               
