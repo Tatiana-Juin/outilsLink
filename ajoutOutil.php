@@ -42,9 +42,40 @@
                 $idCategorie = showCategorieName($categorie);
                 $categorie_id = $idCategorie['id_categorie'];
 
-                $ajout_outil = addOutil($categorie_id,$nom_outil_min,$url_outil);
+                // VERIFICATION QUE URL DE L'OUTIL N'EXISTE PAS DEJA 
+                $allOutils = allOutil(); 
+                $outilExisteDeja = false; 
+                foreach($allOutils as $key => $allOutil){
+                //  si le nom existe  
+                    if($allOutil['nom_outil'] == $nom_outil_min){
+                        
+                        $outilExisteDeja = true;
+                        // si l'url et le nom existe 
+                        if($allOutil['url_outil'] ==$url_outil){
+                            $erreur.="L'url et le nom  existe déjà";
+                            $outilExisteDeja = true;
+                        }else{
+                            // message si il a que le nom qui existe 
+                            $erreur .= "Le nom de l'outil existe déjà .";
+                        }
+                        break;
+                    }else{
+                        // si url existe deja 
+                        if($allOutil['url_outil'] ==$url_outil){
+                            $erreur.="L'url  de l'outil existe déjà ";
+                            $outilExisteDeja = true;
+                            break;
+                        }
+                            
+                        
+                    }
+                }
+                if($outilExisteDeja ===false){
+                    $ajout_outil = addOutil($categorie_id,$nom_outil_min,$url_outil);
 
-                header("location:".RACINE_SITE."index.php");
+                    header("location:".RACINE_SITE."index.php");
+                }
+              
             }
 
 
