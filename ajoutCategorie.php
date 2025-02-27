@@ -33,19 +33,28 @@
            if(empty($info)){
                 $nom_categorie = htmlentities($nom_categorie);
                 $nom_categorie_min = strtolower($nom_categorie);
-               /*
-                    AVANT IL FAUT VERIFIER QUE LE NOM DE LA CATEGORIE EXISTE PAS 
-                    POUR CELA IL FAUT APPELLER LA FONCTION allCategorie 
-                    -FAIRE UNE BOUCLE OU ON VERIFIE QUE LE NOM N'EST PAS EGALE A UN NOM DE CATEGORIE EXISTANT 
-                    -SI  BOOLEAN TRUE ALORS ON AFFICHE UN MESSAGE DISANT QUE CETTE CATEGORIE EXISTE SINON BOOLEAN FALSE ET ON APPELLE LA FONCTION 
-                    - IL FAUT FORCER A CE QUE L'INSERTION SOIT EN MINUSCULE 
-               */
-
-                //Appelle de la fonction
-                $resultat = addCategorie($nom_categorie_min);
-
-                 header("location:".RACINE_SITE."categorie.php");
               
+                // POUR EVITER D'INSERER LA MEME CATEGORIE DEUX FOIS 
+
+               $allCategories = allCategorie();
+               $categorieExisteDeja = false;
+                // Boucle qui permet d'itterer pour comparer le nom de chaque categorie avec celui de la bdd 
+               foreach($allCategories as $key => $allCategorie){
+                    if($allCategorie['nom_categorie'] === $nom_categorie_min){
+                        $info="La categorie existe déjà";
+                        $categorieExisteDeja = true;
+                        break;
+                    }else{
+                       $categorieExisteDeja = false;
+                    }
+               }
+
+                //Si la categorie n'existe pas alors on appelle la fonction et on redirige vers la page categorie 
+                if($categorieExisteDeja === false){
+                    $resultat = addCategorie($nom_categorie_min);
+                    header("location:".RACINE_SITE."categorie.php");
+                }
+                
            }
         }
     }
