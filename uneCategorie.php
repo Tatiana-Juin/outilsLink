@@ -26,9 +26,24 @@
 ?>
 
 <main class="une_categorie">
-
+    <!-- NOM DE LA PAGE   -->
     <h1 class="title_page"> <?= $nomCategorie['nom_categorie'] ?> </h1>
 
+    <!-- POUR LA MODIFICATION ET SUPRESSION DE CATEGORIE  -->
+    <div class="container_modif_categorie">
+        
+        <!-- modification -->
+        <a href="#" class="modif_item_categorie"> 
+         <i class="bi bi-pencil-fill"></i>
+        </a>
+
+        <!-- supression -->
+         <a href="#" class="modif_item_categorie">
+            <i class="bi bi-trash-fill"></i>
+         </a>
+    </div>
+
+    <!-- POUR AFFICHER TOUT LES OUTILS D'UNE CATEGORIE  -->
    <div class="all_outils_categorie">
 
         <?php if(!empty($outilsCategorie)){
@@ -47,7 +62,8 @@
             
             }
         }else{ ?>
-            <p>il n'y a acun outil dans cette categorie </p>
+        <!-- s'il n'y a aucun outil dans la categorie  -->
+            <p class="erreur_categorie">Il n'y a aucun outil dans cette categorie </p>
        <?php }?>
 
    </div>

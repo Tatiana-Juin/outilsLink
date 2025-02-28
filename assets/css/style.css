@@ -180,10 +180,28 @@
 }
 
 /* **********************UNE CATEGORIE **************** */
+
+/* style pour la div contenant la modification et suppression de la categorie  */
+.container_modif_categorie{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+/* style pour les outils des categories  */
 .all_outils_categorie{
     display: flex;
     flex-wrap: wrap;
 }
+/* style quand il à pas d'outils dans une categorie  */
+.erreur_categorie{
+    color:red;
+    /* text-align: center !important; */
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 15px;  
+}
+
 
 
 
