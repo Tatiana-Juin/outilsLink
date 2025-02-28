@@ -188,6 +188,26 @@
     /* border: 1px solid blue; */
 }
 
+/* .modif_supression_cat{
+    display: flex;
+
+    width: 50vw;
+  
+} */
+
+.modif_item_categorie{
+    color:#3F4574;
+    margin: 0 50px 15px 0;
+    font-size: 18px;
+
+}
+/* style de la ligne  */
+ hr{
+    border:none;
+    border-top:2px solid #EBEBEB;
+    
+ }
+
 /* style pour les outils des categories  */
 .all_outils_categorie{
     display: flex;

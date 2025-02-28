@@ -31,17 +31,23 @@
 
     <!-- POUR LA MODIFICATION ET SUPRESSION DE CATEGORIE  -->
     <div class="container_modif_categorie">
-        
-        <!-- modification -->
-        <a href="#" class="modif_item_categorie"> 
-         <i class="bi bi-pencil-fill"></i>
-        </a>
 
-        <!-- supression -->
-         <a href="#" class="modif_item_categorie">
-            <i class="bi bi-trash-fill"></i>
-         </a>
+        <!-- <div class="modif_supression_cat"> -->
+            <!-- modification -->
+            <a href="#" class="modif_item_categorie"> 
+                <i class="bi bi-pencil-fill"></i>
+            </a>
+
+            <!-- supression -->
+            <a href="#" class="modif_item_categorie">
+                <i class="bi bi-trash-fill"></i>
+            </a>
+            
+        <!-- </div> -->
+        
+        
     </div>
+    <hr>
 
     <!-- POUR AFFICHER TOUT LES OUTILS D'UNE CATEGORIE  -->
    <div class="all_outils_categorie">
