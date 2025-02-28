@@ -42,7 +42,7 @@
                 $idCategorie = showCategorieName($categorie);
                 $categorie_id = $idCategorie['id_categorie'];
 
-                // VERIFICATION QUE URL DE L'OUTIL N'EXISTE PAS DEJA 
+                // VERIFICATION QUE URL ET LE NOM DE L'OUTIL N'EXISTE PAS DEJA 
                 $allOutils = allOutil(); 
                 $outilExisteDeja = false; 
                 foreach($allOutils as $key => $allOutil){
