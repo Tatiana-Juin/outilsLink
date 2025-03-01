@@ -27,6 +27,8 @@
         return $pdo;
     }
     connexionBdd();
+    // *********************************FUNCTION POUR LES CATEGORIE ***********************************************
+
 
     //FUNCTION POUR AJOUTER UNE CATEGORIE 
     function addCategorie(string $nom_categorie){
@@ -80,7 +82,19 @@
         $resultat = $requete->fetch();
         return $resultat;
     }
+
+    // FONCTION POUR MODIFIER UNE CATEGORIE 
+    function updateCategorie($id_categorie,$nom_categorie){
+        $pdo = connexionBdd();
+        $sql = "UPDATE categorie SET nom_categorie = :nom_categorie WHERE id_categorie = :id_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':nom_categorie' => $nom_categorie,
+            ':id_categorie' => $id_categorie
+        ));
+    }
     
+    // *********************** POUR LES OUTILS ****************************************
 
     //FONCTION POUR AJOUTER UN OUTIL 
     function addOutil(int $id_categorie, string $nom_outil,string $url_outil){
