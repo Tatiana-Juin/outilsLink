@@ -1,6 +1,7 @@
 <?php 
     $titre = "Une categorie"; 
     require_once("inc/function.inc.php");
+    
 
     if(isset($_GET['action']) && isset($_GET['idCategorie'])){
 
@@ -33,10 +34,14 @@
     <div class="container_modif_categorie">
 
         <!-- <div class="modif_supression_cat"> -->
-            <!-- modification -->
-            <a href="#" class="modif_item_categorie"> 
-                <i class="bi bi-pencil-fill"></i>
-            </a>
+             <!-- modification -->
+           
+               
+                <a href="<?=RACINE_SITE?>modificationCategorie.php?action=update&idCategorie=<?=$nomCategorie['id_categorie']?>" class="modif_item_categorie"> 
+                    <i class="bi bi-pencil-fill"></i>
+                </a>
+
+            
 
             <!-- supression -->
             <a href="#" class="modif_item_categorie">

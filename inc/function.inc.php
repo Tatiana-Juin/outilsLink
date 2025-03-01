@@ -74,7 +74,7 @@
     // FONCTION QUI PERMET D'AFFICHER UNE CATEGORIE PAR RAPPORT A ID DE LA CATEGORIE 
     function categorieById(int $id_categorie){
         $pdo = connexionBdd();
-        $sql = "SELECT nom_categorie FROM categorie WHERE id_categorie = :id_categorie";
+        $sql = "SELECT id_categorie,nom_categorie FROM categorie WHERE id_categorie = :id_categorie";
         $requete = $pdo->prepare($sql);
         $requete->execute(array(
             ":id_categorie" =>$id_categorie
