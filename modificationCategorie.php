@@ -44,10 +44,6 @@
                 $erreur .= "Le nom de la categorie n'est pas valide";
              }
 
-           
-
-            
-
             if(empty($erreur)){
                 // securiser les donnes envoyer
                 $nom_categorie = htmlentities($nom_categorie);
