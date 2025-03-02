@@ -10,8 +10,14 @@
 
         // recupere de manière sécuriser id 
         $idCategorie = htmlentities($_GET['idCategorie']);
+
         // Appelle de la fonction pour récuperer le nom par rapport a id de la categorie 
         $nomCategorie = categorieById($idCategorie);
+
+        // Si l'utilisateur change la valeur de l'id et qu'il n'existe pas 
+        if((int) $idCategorie != $nomCategorie['id_categorie']){
+            header("location:".RACINE_SITE."categorie.php");
+        }
 
         // Appelle de la fonction pour afficher tous les outils par rapport a id de la categorie 
         $outilsCategorie = allOutilCategory($idCategorie);
