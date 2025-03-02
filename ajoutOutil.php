@@ -124,7 +124,7 @@
                         
                     ?>
                     <label for="categories_select" class="label_categorie">  Categories</label>
-                    <select name="categories_select" id="categorie_select">
+                    <select name="categories_select" class="categorie_select">
 
                         <option value="">-- Choisi une categorie --</option>
                         <?php foreach($categories as $key =>$categorie){ ?>
@@ -134,7 +134,7 @@
                     </select>
 
                     <!-- BTN AJOUT OUTILS -->
-                    <input type="submit" value="ajouter" id="btn_outil" class="btn_outil">
+                    <input type="submit" value="ajouter"  class="btn_outil">
                     
                 </form>
                             

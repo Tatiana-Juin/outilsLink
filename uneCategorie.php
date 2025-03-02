@@ -50,7 +50,7 @@
             
 
             <!-- supression -->
-            <a href="#" class="modif_item_categorie">
+            <a href="<?=RACINE_SITE?>supprimerCategorie.php?action=delete&idCategorie=<?=$nomCategorie['id_categorie']?>" class="modif_item_categorie">
                 <i class="bi bi-trash-fill"></i>
             </a>
             
@@ -80,7 +80,7 @@
             }
         }else{ ?>
         <!-- s'il n'y a aucun outil dans la categorie  -->
-            <p class="erreur_categorie">Il n'y a aucun outil dans cette categorie </p>
+            <p class="echec">Il n'y a aucun outil dans cette categorie </p>
        <?php }?>
 
    </div>

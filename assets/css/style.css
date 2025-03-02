@@ -8,7 +8,7 @@
 /***** *********PAGE AJOUT CATEGORIE ********************* *****/
 
 /* ELEMENT CONTENANT TOUTE LA PAGE  */
-.ajout_categorie,.ajout_outil,.modification_categorie{
+.ajout_categorie,.ajout_outil,.modification_categorie,.suppression_categorie{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +67,7 @@
  }
  
  /******* PAGE AJOUT OUTILS   ****** **/
-#categorie_select{
+.categorie_select{
     margin-top:15px;
 }
 
@@ -213,17 +213,35 @@
     display: flex;
     flex-wrap: wrap;
 }
-/* style quand il à pas d'outils dans une categorie  */
-.erreur_categorie{
-    color:red;
-    /* text-align: center !important; */
-    font-weight: bolder;
-    font-size: 20px;
-    margin-top: 15px;  
+
+
+
+/******** PAGE SUPPRESSION CATEGORIE  */
+
+table{
+    /* border:1px solid blue; */
+    width:40vw;
+    
 }
 
 
+table td {
+    padding: 8px; 
+    text-align: center; 
+    /* border-right: 1px solid green;  */
+}
 
+/* BOUTON SUPRRESSION */
+.btn_categorie_sup{
+    width:150px;
+    
+    padding: 6px;
+    border-radius:10px;
+    /* border-color:#ffeeee; */
+    border: 1px solid #ccc;
+    background-color: #ffeeee;
+    cursor: pointer;
+}
 
 
 
