@@ -18,6 +18,8 @@
             // Pour afficher les outils de la categorie 
             $outilsCategories = allOutilCategory($idCategorie);
 
+           
+
         }
     }
     
@@ -49,13 +51,11 @@
             <?php }  ?>
         </table>
 
-        
-    </form>
         <p class="echec">Attention si tu ne change pas la categorie de ces outils il seront supprimer avec ta categorie </p>
 
         <input type="submit" value="Supprimer"  class="btn_categorie"> 
 
-   
+    </form>
 </main>
 <?php 
     require_once("inc/footer.inc.php");
