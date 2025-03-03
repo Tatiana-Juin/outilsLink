@@ -94,8 +94,16 @@
         ));
     }
 
-   
-    
+    // FONCTION POUR SUPPRIMER UNE CATEGORIE
+    function deleteCategorie(int $id_categorie){
+        $pdo = connexionBdd();
+        $sql = "DELETE FROM categorie WHERE id_categorie = :id_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_categorie' => $id_categorie
+        ));
+    }
+
     // *********************** POUR LES OUTILS ****************************************
 
     //FONCTION POUR AJOUTER UN OUTIL 
@@ -154,6 +162,29 @@
             ':id_outil' => $id_outil
         ));
      }
+    
+      // FONCTION QUI COMPTE LE NB D'OUTILS PAR RAPPORT A UNE CATEGORIE 
+     function countIdOutilCat(int $id_categorie){
+        $pdo = connexionBdd();
+        $sql = "SELECT count(id_outil) FROM outils WHERE id_categorie = :id_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_categorie' => $id_categorie
+        ));
+        $resultat = $requete->fetch();
+        return $resultat;
+     }
+
+
+    //  FONCTION POUR SUPPRIMER LES OUTIL PAR RAPPORT A LA CATEGORIE 
+    function deleteOutilCat(int $id_categorie){
+        $pdo = connexionBdd();
+        $sql = "DELETE FROM outil WHERE id_categorie = :id_categorie";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_categorie' => $id_categorie
+        ));
+    }
 
 
 ?>

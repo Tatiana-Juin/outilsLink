@@ -20,7 +20,13 @@
             // Pour afficher les outils de la categorie 
             $outilsCategories = allOutilCategory($idCategorie);
 
-           
+            // POUR LA SUPPRESSION
+            if(isset($_POST['supprimer_categorie']) ){
+
+                // Ccompte le nombre d'outil present 
+                $countOutilCat = countIdOutilCat($idCategorie);
+                
+            }
 
         }
     }
@@ -35,6 +41,13 @@
         // Pour que la page s'affiche avec la modification apporté 
         $outilsCategories = allOutilCategory($idCategorie);
     }
+
+    // POUR LA SUPPRESSION DE CATEGORIE 
+    // if(isset($_POST['supprimer_categorie']) ){
+
+     
+    //     $countOutilCat = countIdOutilCat($idCategorie);
+    // }
 ?>
 
 <main class="suppression_categorie">
