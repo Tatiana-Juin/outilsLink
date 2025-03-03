@@ -166,7 +166,7 @@
       // FONCTION QUI COMPTE LE NB D'OUTILS PAR RAPPORT A UNE CATEGORIE 
      function countIdOutilCat(int $id_categorie){
         $pdo = connexionBdd();
-        $sql = "SELECT count(id_outil) FROM outils WHERE id_categorie = :id_categorie";
+        $sql = "SELECT count(id_outil) FROM outil WHERE id_categorie = :id_categorie";
         $requete = $pdo->prepare($sql);
         $requete->execute(array(
             ':id_categorie' => $id_categorie
