@@ -3,6 +3,7 @@
     require_once("inc/function.inc.php");
     require_once("inc/header.inc.php");
 
+    // POUR LA SUPPRESSION 
     if(isset($_GET) && isset($_GET['action']) && isset($_GET['idCategorie'])){
 
         if(!empty($_GET['action']) && $_GET['action'] =="delete" && !empty($_GET['idCategorie'])){
@@ -22,7 +23,15 @@
 
         }
     }
-    
+
+    // POUR LA MODIFICATION D'UNE CATEGORIE 
+    if($_SERVER['REQUEST_METHOD'] =='POST' && isset($_POST['outil'])){
+        foreach($_POST['outil'] as $id_outil =>$outil_data){
+            $id_categorie = $outil_data['categorie'];
+            updateCategoryOutil($id_outil,$id_categorie);
+            header("Location: " . RACINE_SITE . "categorie.php"); 
+        }
+    }
 ?>
 
 <main class="suppression_categorie">
@@ -37,8 +46,8 @@
                     <td><?= $outil['nom_outil'] ?></td>
                     <td>
                         <!-- champs cacher pour récuperer l'id de l'outil -->
-                        <input type="hidden" name="id_outil<?=$outil['id_outil']?>" value="<?= $outil['id_outil'] ?>">
-                        <select name="category_<?=$outil['nom_outil']?>" class="group_categorie">
+                        <input type="hidden" name="outil[<?= $outil['id_outil'] ?>][id]" value="<?= $outil['id_outil'] ?>">
+                        <select name="outil[<?= $outil['id_outil'] ?>][categorie]" class="group_categorie">
                             <!-- boucle pour afficher les categories et on seelctionne celle ou on est grace a la condition ternaire -->
                             <?php foreach($allCategories as $category){ ?>
                                 <option value="<?= $category['id_categorie'] ?>" 
