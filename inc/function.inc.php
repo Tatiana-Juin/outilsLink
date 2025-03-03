@@ -93,6 +93,8 @@
             ':id_categorie' => $id_categorie
         ));
     }
+
+   
     
     // *********************** POUR LES OUTILS ****************************************
 
@@ -141,6 +143,17 @@
         $resultat = $requete->fetchAll();
         return $resultat;
     }
+
+     // FONCTION POUR MODIFIER LA CATEGORIE D'UN OUTIL
+     function updateCategoryOutil(int $id_outil, int $id_categorie){
+        $pdo = connexionBdd();
+        $sql = "UPDATE outil SET id_categorie = :id_categorie WHERE id_outil = :id_outil";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_categorie' => $id_categorie,
+            ':id_outil' => $id_outil
+        ));
+     }
 
 
 ?>

@@ -6,4 +6,4 @@
 
 ## reflexion modification suppression
 - recupérer id de l'outil 
-- creation de la fonction 
+- creation de la fonction updateCategoryOutil($id_outil,$id_categorie)
