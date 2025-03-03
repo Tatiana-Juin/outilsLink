@@ -36,6 +36,8 @@
                 <tr>
                     <td><?= $outil['nom_outil'] ?></td>
                     <td>
+                        <!-- champs cacher pour récuperer l'id de l'outil -->
+                        <input type="hidden" name="id_outil<?=$outil['id_outil']?>" value="<?= $outil['id_outil'] ?>">
                         <select name="category_<?=$outil['nom_outil']?>" class="group_categorie">
                             <!-- boucle pour afficher les categories et on seelctionne celle ou on est grace a la condition ternaire -->
                             <?php foreach($allCategories as $category){ ?>
