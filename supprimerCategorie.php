@@ -3,13 +3,14 @@
     require_once("inc/function.inc.php");
     require_once("inc/header.inc.php");
 
-    // POUR LA SUPPRESSION 
+    // POUR VOIR TOUS LES OUTILS DE LA SUPPRESSION  
     if(isset($_GET) && isset($_GET['action']) && isset($_GET['idCategorie'])){
 
         if(!empty($_GET['action']) && $_GET['action'] =="delete" && !empty($_GET['idCategorie'])){
             // POUR AFFICHER LE NOM DES CATEGORIE 
             $idCategorie = htmlentities($_GET['idCategorie']);
             $nomCategorie = categorieById($idCategorie);
+
             if((int) $idCategorie != $nomCategorie['id_categorie']){
                 header("location:".RACINE_SITE."categorie.php");
             }
@@ -29,8 +30,10 @@
         foreach($_POST['outil'] as $id_outil =>$outil_data){
             $id_categorie = $outil_data['categorie'];
             updateCategoryOutil($id_outil,$id_categorie);
-            header("Location: " . RACINE_SITE . "categorie.php"); 
+           
         }
+        // Pour que la page s'affiche avec la modification apporté 
+        $outilsCategories = allOutilCategory($idCategorie);
     }
 ?>
 
@@ -57,7 +60,7 @@
                             <?php }  ?>
                         </select>
                     </td>
-                    <td><input type="submit" value="Modifier" class="btn_categorie"></td>
+                    <td><input type="submit" value="Modifier" class="btn_categorie" name="supprimer_categorie"></td>
                 </tr>
             <?php }  ?>
         </table>
