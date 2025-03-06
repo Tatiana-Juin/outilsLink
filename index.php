@@ -59,11 +59,13 @@
                             <p class="affiche_nom_outil"><?= $allOutil['nom_outil'] ?> </p>
                         </a>
 
-                        <div>
+                        <div class="div_nom_categorie">
                             <p class="affiche_categorie"><?= $allOutil['nom_categorie'] ?></p>
-                            <a href="">
 
-                            </a>
+                            <!-- ICON POUR FAIRE APPARAITRE UN MENU  -->
+                            <i class="bi bi-three-dots-vertical"></i>
+                            
+                            
                         </div>
 
                     </div>

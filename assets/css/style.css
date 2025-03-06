@@ -135,7 +135,14 @@
 
 }
 
+.div_nom_categorie{
+    display: flex;
+}
 
+.bi-three-dots-vertical{
+    margin: 15px 0 0 15px;
+    cursor: pointer;
+}
 
 /* ****************PAGE CATEGORIE *********** */
 .container_categorie{
