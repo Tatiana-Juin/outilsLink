@@ -50,7 +50,7 @@
                     </a>
                 <?php
                 }
-                // POUR AFFICHER LE MESSAGE ERREUR IL SUFFIT DE FAIRE UN ELSE ET DEMETTRE UN PARAGRAPHE EN APPELLANT $INFO PAR CONTRE IL FAUT REFAIRE LE STYLE CAR CELA S'AFFICHE A COTER ET NON EN DESSOUS JE PENSE QU'IL FAUT AJOUTER UNE DIV 
+        
                  foreach ($allOutils as $key => $allOutil){ ?>
                     <div class="card">
                         <!-- POUR LE NOM DE L'OUTIL -->
@@ -59,10 +59,13 @@
                             <p class="affiche_nom_outil"><?= $allOutil['nom_outil'] ?> </p>
                         </a>
 
-                        <!-- NOM DE LA CATEGORIE  -->
-                        <p class="affiche_categorie"><?= $allOutil['nom_categorie'] ?></p>
+                        <div>
+                            <p class="affiche_categorie"><?= $allOutil['nom_categorie'] ?></p>
+                            <a href="">
 
-                        
+                            </a>
+                        </div>
+
                     </div>
 
                 <?php 

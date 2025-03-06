@@ -120,7 +120,7 @@
 /* BOUTON POUR LA CATEGORIE  */
 .affiche_categorie{
 
-    margin-right: 15px;
+    /* margin-right: 18px; */
     
     width:150px;
     padding: 4px; 
@@ -130,8 +130,12 @@
     background-color: #ffeeee;
     margin-top: 10px;
     text-align: center;
+    
+   
 
 }
+
+
 
 /* ****************PAGE CATEGORIE *********** */
 .container_categorie{
@@ -188,12 +192,7 @@
     /* border: 1px solid blue; */
 }
 
-/* .modif_supression_cat{
-    display: flex;
 
-    width: 50vw;
-  
-} */
 
 .modif_item_categorie{
     color:#3F4574;
