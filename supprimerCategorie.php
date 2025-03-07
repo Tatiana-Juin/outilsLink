@@ -53,8 +53,8 @@ if(isset($_GET['action']) && isset($_GET['idCategorie'])) {
 }
 ?>
 
-<main class="suppression_categorie">
-    <h1 class="title_page"><?=$nomCategorie['nom_categorie']?></h1>
+<main class="suppression-categorie">
+    <h1 class="title-page"><?=$nomCategorie['nom_categorie']?></h1>
 
     <form action="" method="post">
         <!-- Tableau pour afficher les outils -->
@@ -65,7 +65,7 @@ if(isset($_GET['action']) && isset($_GET['idCategorie'])) {
                     <td>
                         <!-- champ caché pour récupérer l'id de l'outil -->
                         <input type="hidden" name="outil[<?= $outil['id_outil'] ?>][id]" value="<?= $outil['id_outil'] ?>">
-                        <select name="outil[<?= $outil['id_outil'] ?>][categorie]" class="group_categorie">
+                        <select name="outil[<?= $outil['id_outil'] ?>][categorie]" class="group-categorie">
                             <!-- boucle pour afficher les catégories et sélectionner celle où on est -->
                             <?php foreach($allCategories as $category): ?>
                                 <option value="<?= $category['id_categorie'] ?>" 
@@ -75,7 +75,7 @@ if(isset($_GET['action']) && isset($_GET['idCategorie'])) {
                             <?php endforeach; ?>
                         </select>
                     </td>
-                    <td><input type="submit" value="Modifier" class="btn_categorie"></td>
+                    <td><input type="submit" value="Modifier" class="btn-categorie"></td>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -83,7 +83,7 @@ if(isset($_GET['action']) && isset($_GET['idCategorie'])) {
         <p class="echec">Attention, si tu ne changes pas la catégorie de ces outils, ils seront supprimés avec ta catégorie.</p>
 
         <!-- Bouton pour supprimer la catégorie -->
-        <input type="submit" value="Supprimer" name="supprimer_categorie" class="btn_categorie">
+        <input type="submit" value="Supprimer" name="supprimer_categorie" class="btn-categorie">
     </form>
 </main>
 

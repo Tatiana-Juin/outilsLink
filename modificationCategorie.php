@@ -76,18 +76,18 @@
     }
 ?>
 
-<main class="modification_categorie">
+<main class="modification-categorie">
     <!-- TITRE DE LA PAGE  -->
-    <h1 class="title_page">Modification du nom de la catégorie </h1>
+    <h1 class="title-page">Modification du nom de la catégorie </h1>
 
         <!-- AJOUT D'UN MESSAGE SI CELA EST UNE ERREUR -->
         <p class="echec"> <?= $erreur; ?></p> 
 
-        <form action="" method="POST" class="add_categorie">
+        <form action="" method="POST" class="add-categorie">
             <!-- NOM D'UNE CATEGORIE -->
-            <label for="nom_categorie" class="label_categorie">Nom categorie</label>
-            <input type="text" name="nom_categorie" id="nom_categorie" class="nom_categorie" value="<?=$nomCategorie['nom_categorie']?>" >  
-            <input type="submit" value="Ajouter"  class="btn_categorie"> 
+            <label for="nom_categorie" class="label-categorie">Nom categorie</label>
+            <input type="text" name="nom_categorie"  class="nom-categorie" value="<?=$nomCategorie['nom_categorie']?>" >  
+            <input type="submit" value="Ajouter"  class="btn-categorie"> 
         </form>
 
     

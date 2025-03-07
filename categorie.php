@@ -8,24 +8,24 @@
 
 ?>
 
-<main class="container_categorie">
+<main class="container-categorie">
     <!-- titre de la page  -->
-    <h1 class="title_page">Categories</h1>
+    <h1 class="title-page">Categories</h1>
 
-    <div class="div_icon_categorie">
+    <div class="div-icon-categorie">
     <!-- bouton pour aller a ajouter une categorie  -->
-        <a href="<?=RACINE_SITE."ajoutCategorie.php"?>" class="link_icon_categorie">
+        <a href="<?=RACINE_SITE."ajoutCategorie.php"?>" class="link-icon-categorie">
             <i class="bi bi-plus-circle-fill"></i>
         </a>
       
     </div>
 
     <!-- POUR AFFICHER TOUTES LES CATEGORIES  -->
-    <div class="div_all_categories">
+    <div class="div-all-categories">
 
         <?php foreach($allCategories as $key => $allCategorie){ ?>
 
-            <a href="<?=RACINE_SITE?>uneCategorie.php?action=voir&idCategorie=<?=$allCategorie['id_categorie']?>" class="link_categorie"><?=$allCategorie["nom_categorie"]?></a>
+            <a href="<?=RACINE_SITE?>uneCategorie.php?action=voir&idCategorie=<?=$allCategorie['id_categorie']?>" class="link-categorie"><?=$allCategorie["nom_categorie"]?></a>
 
         <?php } ?>
 

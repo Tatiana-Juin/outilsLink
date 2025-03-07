@@ -85,9 +85,9 @@
 
 ?>
 
-    <main class="ajout_outil">
+    <main class="ajout-outil">
 
-        <h1 class="title_page">Ajout d'un outil </h1>
+        <h1 class="title-page">Ajout d'un outil </h1>
         
         <div class="div-outil">
 
@@ -108,23 +108,23 @@
             <!-- SINON IL EXISTE DEJA UNE OU PLUSIEURS CATEGORIE  -->
             <?php  }else{ ?>
 
-                    <form action="" method="POST" class="add_outil">
+                    <form action="" method="POST" class="add-outil">
                         <p class="echec"> <?= $erreur ?> </p>
                     <!-- NOM D'UN OUTIL -->
-                    <label for="nom_outil" class="label_outil">Nom </label>
-                    <input type="text" name="nom_outil" id="nom_outil" class="nom_outil ">
+                    <label for="nom_outil" class="label-outil">Nom </label>
+                    <input type="text" name="nom_outil" id="nom-outil" class="nom-outil ">
 
                     <!-- url -->
                     <label for="url_outil" class="label_url">url </label>
-                    <input type="text" name="url_outil" id="url_outil" class="url_outil">
+                    <input type="text" name="url_outil" id="url-outil" class="url-outil">
 
                     <!-- TOUTE LES CATEGORIE -->
                     <?php 
                         $categories = allCategorie();
                         
                     ?>
-                    <label for="categories_select" class="label_categorie">  Categories</label>
-                    <select name="categories_select" class="categorie_select">
+                    <label for="categories_select" class="label-categorie">  Categories</label>
+                    <select name="categories_select" class="categorie-select">
 
                         <option value="">-- Choisi une categorie --</option>
                         <?php foreach($categories as $key =>$categorie){ ?>
@@ -134,7 +134,7 @@
                     </select>
 
                     <!-- BTN AJOUT OUTILS -->
-                    <input type="submit" value="ajouter"  class="btn_outil">
+                    <input type="submit" value="ajouter"  class="btn-outil">
                     
                 </form>
                             

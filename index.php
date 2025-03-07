@@ -36,11 +36,11 @@
     
 ?>
 
-<main class="affiche_outil ">
+<main class="affiche-outil ">
         <!-- BOUCLE POUR AFFICHER TOUS LES OUTILS  -->
-    <h1 class="title_page">Afficher tous les outils </h1>
+    <h1 class="title-page">Afficher tous les outils </h1>
 
-    <div class="card_container">
+    <div class="card-container">
 
             <?php if(!empty($allOutils)){ 
                 // POUR AFFICHER LE BOUTON RETOUR QUI REVIENS EN ARRIERE SANS LA RECHERCHE 
@@ -55,17 +55,18 @@
                     <div class="card">
                         <!-- POUR LE NOM DE L'OUTIL -->
 
-                        <a href="<?=$allOutil['url_outil']?>" target="_blank" class="affiche_btn_outil">  
-                            <p class="affiche_nom_outil"><?= $allOutil['nom_outil'] ?> </p>
+                        <a href="<?=$allOutil['url_outil']?>" target="_blank" class="affiche-btn-outil">  
+                            <p class="affiche-nom-outil"><?= $allOutil['nom_outil'] ?> </p>
                         </a>
 
-                        <div class="div_nom_categorie">
-                            <p class="affiche_categorie"><?= $allOutil['nom_categorie'] ?></p>
+                        <div class="categorie-element">
+                            <p class="affiche-categorie"><?= $allOutil['nom_categorie'] ?></p>
 
                             <!-- ICON POUR FAIRE APPARAITRE UN MENU  -->
                             <i class="bi bi-three-dots-vertical"></i>
-                            
-                            
+
+                            <!-- menu qui apparait lors du clique  -->
+                             
                         </div>
 
                     </div>

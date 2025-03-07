@@ -61,21 +61,21 @@
 
 ?>
 
- <main class="ajout_categorie">
+ <main class="ajout-categorie">
     <!-- TITRE DE LA PAGE  -->
-    <h1 class="title_page">Ajout d'une categorie </h1>
+    <h1 class="title-page">Ajout d'une categorie </h1>
 
     
 
-    <div class="div_categorie">
+    <div class="div-categorie">
         <!-- AJOUT D'UN MESSAGE SI CELA EST UNE ERREUR -->
         <p class="echec"> <?= $info; ?></p> 
 
         <form action="" method="POST" class="add_categorie">
             <!-- NOM D'UNE CATEGORIE -->
             <label for="nom_categorie" class="label_categorie">Nom categorie</label>
-            <input type="text" name="nom_categorie"  class="nom_categorie" >  
-            <input type="submit" value="Ajouter"  class="btn_categorie"> 
+            <input type="text" name="nom_categorie"  class="nom-categorie" >  
+            <input type="submit" value="Ajouter"  class="btn-categorie"> 
         </form>
 
     </div>

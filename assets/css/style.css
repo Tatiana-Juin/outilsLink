@@ -8,7 +8,7 @@
 /***** *********PAGE AJOUT CATEGORIE ********************* *****/
 
 /* ELEMENT CONTENANT TOUTE LA PAGE  */
-.ajout_categorie,.ajout_outil,.modification_categorie,.suppression_categorie{
+.ajout-categorie,.ajout-outil,.modification-categorie,.suppression-categorie{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@
 }
 
 /* TITRE DE LA PAGE  */
-.title_page{
+.title-page{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -26,26 +26,26 @@
 }
 
 /* FORMULAIRE POUR AJOUTER UNE CATEGORIE  */
-.add_categorie,.add_outil{
+.add-categorie,.add-outil{
     display: flex;
     flex-direction: column;
 }
 
 /* STYLE DU LABEL DU FORMULAIRE AJOUT D'UNE CATEGORIE */
-.label_categorie,.label_outil,.label_url{
+.label-categorie,.label-outil,.label-url{
     margin-top:15px;
     font-size:20px;
 }
 
 /* STYLE DU CHAMPS DE TEXTE POUR AJOUTER LE STYLE  */
-.nom_categorie,.nom_outil,.url_outil{
+.nom-categorie,.nom-outil,.url-outil{
     margin-top:15px;
     width:300px;
     height:27px;
 }
 
 /* STYlE DU BOUTON */
- .btn_categorie,.btn_outil{
+ .btn-categorie,.btn-outil{
     margin-top: 15px;
     width:150px;
     
@@ -67,14 +67,14 @@
  }
  
  /******* PAGE AJOUT OUTILS   ****** **/
-.categorie_select{
+.categorie-select{
     margin-top:15px;
 }
 
 /* ****** *** STYLE PAGE INDEX  ****** */
 
 /* STYLE DU CONTAINER QUI REGROUPE TOUTES LES DIV CARD */
-.card_container {
+.card-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
@@ -101,7 +101,7 @@
 }
 
 /* NOM DE L'OUTIl  */
-.affiche_nom_outil{
+.affiche-nom-outil{
    text-transform: uppercase;
    text-align: center;
    font-weight: bolder;
@@ -110,7 +110,7 @@
 }
 
 /* AFFICHE BOUTON LIEN  */
-.affiche_btn_outil{
+.affiche-btn-outil{
     cursor: pointer;
     margin-top: 10px;
     text-decoration: none;
@@ -118,7 +118,7 @@
 }
 
 /* BOUTON POUR LA CATEGORIE  */
-.affiche_categorie{
+.affiche-categorie{
 
     /* margin-right: 18px; */
     
@@ -135,7 +135,7 @@
 
 }
 
-.div_nom_categorie{
+.categorie-element{
     display: flex;
 }
 
@@ -145,14 +145,14 @@
 }
 
 /* ****************PAGE CATEGORIE *********** */
-.container_categorie{
+.container-categorie{
     display: flex;
     flex-direction: column;
     /* border:1px solid red; */
 }
 
 /* DIV CONTENANT LE BOUTON PLUS  */
-.div_icon_categorie{
+.div-icon-categorie{
     display: flex;
     justify-content: flex-end;
     /* border:1px solid blue; */
@@ -160,14 +160,14 @@
 }
 
 /* LIEN POUR LE BOUTON + QUI PERMET D'AVOIR ACCES A AJOUT CATEGORIE */
-.link_icon_categorie{
+.link-icon-categorie{
     margin-right: 300px;
     font-size: 27px;
     color: #3F4574;
 }
 
 /* DIV CONTENANT TOUTES LES CATEGORIES  */
-.div_all_categories{
+.div-all-categories{
     display: flex;
     /* border:1px solid blue; */
     width: 60vw;
@@ -175,7 +175,7 @@
 }
 
 /* POUR LE LIEN DES CATEGORIES  */
-.link_categorie{
+.link-categorie{
     /* display: flex; */
     text-decoration: none;
     color: black;
@@ -193,7 +193,7 @@
 /* **********************UNE CATEGORIE **************** */
 
 /* style pour la div contenant la modification et suppression de la categorie  */
-.container_modif_categorie{
+.container-modif-categorie{
     display: flex;
     justify-content: center;
     /* border: 1px solid blue; */
@@ -201,7 +201,7 @@
 
 
 
-.modif_item_categorie{
+.modif-item-categorie{
     color:#3F4574;
     margin: 0 50px 15px 0;
     font-size: 18px;
@@ -215,7 +215,7 @@
  }
 
 /* style pour les outils des categories  */
-.all_outils_categorie{
+.all-outils-categorie{
     display: flex;
     flex-wrap: wrap;
 }
@@ -238,7 +238,7 @@ table td {
 }
 
 /* BOUTON SUPRRESSION */
-.btn_categorie_sup{
+.btn-categorie-sup{
     width:150px;
     
     padding: 6px;

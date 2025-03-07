@@ -32,25 +32,25 @@
 
 ?>
 
-<main class="une_categorie">
+<main class="une-categorie">
     <!-- NOM DE LA PAGE   -->
-    <h1 class="title_page"> <?= $nomCategorie['nom_categorie'] ?> </h1>
+    <h1 class="title-page"> <?= $nomCategorie['nom_categorie'] ?> </h1>
 
     <!-- POUR LA MODIFICATION ET SUPRESSION DE CATEGORIE  -->
-    <div class="container_modif_categorie">
+    <div class="container-modif-categorie">
 
         <!-- <div class="modif_supression_cat"> -->
              <!-- modification -->
            
                
-                <a href="<?=RACINE_SITE?>modificationCategorie.php?action=update&idCategorie=<?=$nomCategorie['id_categorie']?>" class="modif_item_categorie"> 
+                <a href="<?=RACINE_SITE?>modificationCategorie.php?action=update&idCategorie=<?=$nomCategorie['id_categorie']?>" class="modif-item-categorie"> 
                     <i class="bi bi-pencil-fill"></i>
                 </a>
 
             
 
             <!-- supression -->
-            <a href="<?=RACINE_SITE?>supprimerCategorie.php?action=delete&idCategorie=<?=$nomCategorie['id_categorie']?>" class="modif_item_categorie">
+            <a href="<?=RACINE_SITE?>supprimerCategorie.php?action=delete&idCategorie=<?=$nomCategorie['id_categorie']?>" class="modif-item-categorie">
                 <i class="bi bi-trash-fill"></i>
             </a>
             
@@ -61,7 +61,7 @@
     <hr>
 
     <!-- POUR AFFICHER TOUT LES OUTILS D'UNE CATEGORIE  -->
-   <div class="all_outils_categorie">
+   <div class="all-outils-categorie">
 
         <?php if(!empty($outilsCategorie)){
 
@@ -69,8 +69,8 @@
 
             <div class="card">
 
-                <a href="<?=$outil['url_outil']?>" target="_blank" class="affiche_btn_outil">
-                    <p class="affiche_nom_outil"><?=$outil['nom_outil']?></p>
+                <a href="<?=$outil['url_outil']?>" target="_blank" class="affiche-btn-outil">
+                    <p class="affiche-nom-outil"><?=$outil['nom_outil']?></p>
                 </a>
 
             </div>
