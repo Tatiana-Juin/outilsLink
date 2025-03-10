@@ -66,6 +66,10 @@
                             <i class="bi bi-three-dots-vertical"></i>
 
                             <!-- menu qui apparait lors du clique  -->
+                             <div class="menu-hiden-card ">
+                                <a href="#" class="item-card">Modifier</a>
+                                <a href="#" class="item-card">Supprimer</a>
+                             </div>
                              
                         </div>
 

@@ -134,14 +134,20 @@
    
 
 }
-
+/* DIV QUI REGROUPE LE NOM DE LA CATEGORIE  */
 .categorie-element{
     display: flex;
 }
 
+/* ICON POUR FAIRE APPARAITRE LE MENU  */
 .bi-three-dots-vertical{
     margin: 15px 0 0 15px;
     cursor: pointer;
+}
+
+/* DIV CONTENANT LE MENU MODIFIER, SUPPRIMER  */
+.menu-hiden-card{
+    display:none;
 }
 
 /* ****************PAGE CATEGORIE *********** */
