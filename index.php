@@ -62,18 +62,20 @@
                         <div class="categorie-element">
                             <p class="affiche-categorie"><?= $allOutil['nom_categorie'] ?></p>
 
-                            <!-- ICON POUR FAIRE APPARAITRE UN MENU  -->
-                            <i class="bi bi-three-dots-vertical"></i>
+                            <!-- ICON POUR FAIRE APPARAITRE UN MENU data-index permet de mettre des info supplementaire qui permet de ne pas changer le style de l'icon -->
+                            <i class="bi bi-three-dots-vertical" data-index="<?= $key ?>"></i>
 
                             <!-- menu qui apparait lors du clique  -->
-                             <div class="menu-hiden-card ">
+                            <div class="menu-hiden-card " id="menu-<?=$key?>">
                                 <a href="#" class="item-card">Modifier</a>
                                 <a href="#" class="item-card">Supprimer</a>
-                             </div>
+                            </div>
                              
                         </div>
 
                     </div>
+                    
+                    
 
                 <?php 
                     } 
