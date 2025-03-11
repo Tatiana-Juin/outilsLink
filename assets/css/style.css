@@ -8,7 +8,7 @@
 /***** *********PAGE AJOUT CATEGORIE ********************* *****/
 
 /* ELEMENT CONTENANT TOUTE LA PAGE  */
-.ajout-categorie,.ajout-outil,.modification-categorie,.suppression-categorie{
+.ajout-categorie,.ajout-outil,.modification-categorie,.suppression-categorie,.modification-outil{
     display: flex;
     flex-direction: column;
     align-items: center;
