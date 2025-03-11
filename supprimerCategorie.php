@@ -65,6 +65,7 @@ if(isset($_GET['action']) && isset($_GET['idCategorie'])) {
                     <td>
                         <!-- champ caché pour récupérer l'id de l'outil -->
                         <input type="hidden" name="outil[<?= $outil['id_outil'] ?>][id]" value="<?= $outil['id_outil'] ?>">
+                        
                         <select name="outil[<?= $outil['id_outil'] ?>][categorie]" class="group-categorie">
                             <!-- boucle pour afficher les catégories et sélectionner celle où on est -->
                             <?php foreach($allCategories as $category): ?>

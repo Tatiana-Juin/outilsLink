@@ -16,6 +16,8 @@
             if( (int) $idOutil != $informationOutil['id_outil']){
                 header("location:".RACINE_SITE."index.php");
             }
+              // Pour afficher toutes les catégories 
+            $allCategories = allCategorie();
 
         }
         else{
@@ -46,12 +48,17 @@
                 <label for="url_outil" class="label-url">url </label>
                 <input type="text" name="url_outil"  class="url-outil" value="<?=$informationOutil['url_outil']?>">
 
-                <!-- Categorie  -->
-                <label for="categories_select" class="label-categorie">  Categories</label>
+                <!-- boucle pour afficher les categories -->
                 <select name="categories_select" class="categorie-select">
-                    <option value="">-- Modifier une categorie --</option>
-                    <option value=""> t </option>
+                    <?php foreach($allCategories as $category): ?>
+                        <option value="<?= $category['id_categorie'] ?>" 
+                                    <?= ($category['id_categorie'] == $informationOutil['id_categorie']) ? 'selected' : '' ?>>
+                                    <?= $category['nom_categorie'] ?>
+                        </option>
+                    <?php endforeach; ?>
                 </select>
+
+
 
                 <input type="submit" value="Modifier"  class="btn-outil">
             </form>
