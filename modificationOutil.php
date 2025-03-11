@@ -19,6 +19,7 @@
               // Pour afficher toutes les catégories 
             $allCategories = allCategorie();
 
+
         }
         else{
             header("location:".RACINE_SITE."index.php");
@@ -27,6 +28,62 @@
     }
     else{
         header("location:".RACINE_SITE."index.php");
+    }
+
+    // MODIFICATION DES INFORMATION
+    $erreur="";
+
+    // VERIFIE  QUE TOUS LES CHAMPS SONT REMPLI
+    if(!empty($_POST)){
+        $verif = true;
+        foreach($_POST as $key => $value){
+            if(empty($value)){
+                $verif = false;
+            }
+        }
+
+        // TOUS LES CHAMPS NE SONT PAS REMPLI
+        if(!$verif){
+            $erreur .="Veuillez remplir tous les champs"; 
+        }
+        else{
+            // TOUS LES CHAMPS SONT REMPLI
+            $nom_outil = trim($_POST['nom_outil']);
+            $url_outil = trim($_POST['url_outil']);
+            $categorie_id = trim($_POST['categories_select']);
+
+            //nom outil 
+            if(!isset($nom_outil) || strlen($nom_outil) < 2 && strlen($nom_outil) > 255 ){
+                $erreur += "Le nom n'est pas valide ";
+            }
+
+            // URL 
+            if(!isset($url_outil) || strlen($url_outil) < 2 && strlen($url_outil) > 255 ){
+                $erreur += "L'url  n'est pas valide ";
+            }
+
+            // S'IL N'Y A PAS DE MESSAGE D'ERREUR
+            if(empty($erreur)){
+                $nom_outil = htmlentities($nom_outil);
+                $nom_outil_min = strtolower($nom_outil);
+                $url_outil = htmlentities($url_outil);
+                $categorie_id = htmlentities($categorie_id);
+
+                $allOutils = allOutil(); 
+ 
+                if( isset($_GET['action']) && $_GET['action'] =="update" && isset($_GET['idOutil']) && !empty($_GET['idOutil']) ){
+
+                    $idOutil = htmlentities($_GET['idOutil']);
+                    updateOutil($idOutil,$categorie_id,$nom_outil,$url_outil);
+
+                    header("location:".RACINE_SITE."index.php");
+                   
+                }
+
+            }
+
+
+        }
     }
 ?>
 
@@ -38,7 +95,7 @@
         <div class="div-outil">
 
             <form action="" method="post" class="add-outil">
-                <p class="echec"></p>
+                <p class="echec"><?= $erreur ?></p>
                 
                 <!-- NOM D'UN OUTIL -->
                 <label for="nom_outil" class="label-outil">Nom </label>
@@ -57,7 +114,7 @@
                         </option>
                     <?php endforeach; ?>
                 </select>
-
+               
 
 
                 <input type="submit" value="Modifier"  class="btn-outil">

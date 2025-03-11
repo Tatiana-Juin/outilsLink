@@ -115,7 +115,7 @@
                     <input type="text" name="nom_outil"  class="nom-outil ">
 
                     <!-- url -->
-                    <label for="url_outil" class="label_url">url </label>
+                    <label for="url_outil" class="label-url">url </label>
                     <input type="text" name="url_outil"  class="url-outil">
 
                     <!-- TOUTE LES CATEGORIE -->
