@@ -199,4 +199,16 @@
         return $resultat;
     }
 
+    //  FUNCTION POUR MODIFIER UN OUTIL 
+    function updateOutil(int $id_outil,int $id_categorie, string $nom_outil,string $url_outil){
+        $pdo = connexionBdd();
+        $sql = "UPDATE outil SET id_categorie = :id_categorie, nom_outil = :nom_outil, url_outil = :url_outil WHERE id_outil = :id_outil";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_categorie' => $id_categorie,
+            ':nom_outil' => $nom_outil,
+            ':url_outil' => $url_outil,
+            ':id_outil' => $id_outil
+        )) ;
+    }
 ?>
