@@ -112,11 +112,11 @@
                         <p class="echec"> <?= $erreur ?> </p>
                     <!-- NOM D'UN OUTIL -->
                     <label for="nom_outil" class="label-outil">Nom </label>
-                    <input type="text" name="nom_outil" id="nom-outil" class="nom-outil ">
+                    <input type="text" name="nom_outil"  class="nom-outil ">
 
                     <!-- url -->
                     <label for="url_outil" class="label_url">url </label>
-                    <input type="text" name="url_outil" id="url-outil" class="url-outil">
+                    <input type="text" name="url_outil"  class="url-outil">
 
                     <!-- TOUTE LES CATEGORIE -->
                     <?php 

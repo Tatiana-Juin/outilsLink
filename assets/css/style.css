@@ -119,11 +119,7 @@
 
 /* BOUTON POUR LA CATEGORIE  */
 .affiche-categorie{
-
-    /* margin-right: 18px; */
-    
-    /* width:150px; */
-    width:10vw;
+    width:150px;
     padding: 4px; 
     border-radius:10px;
     border-color:#ffeeee;
@@ -154,6 +150,18 @@
     flex-direction: column;
     /* margin-top: 20px; */
     
+}
+/* STYLE POUR LES BOUTON DU MENU CARD */
+.item-card{
+    color:#3F4574;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* STYLE POUR LE 1er BOUTON DU MENU DANS LA CARD */
+.item-card:first-child{
+    margin-bottom: 8px;
+    /* margin:8px 0 8px 0; */
 }
 
 /* ****************PAGE CATEGORIE *********** */
