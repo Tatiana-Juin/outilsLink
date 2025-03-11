@@ -75,7 +75,7 @@
     function categorieById(int $id_categorie){
         $pdo = connexionBdd();
         $sql = "SELECT id_categorie,nom_categorie FROM categorie WHERE id_categorie = :id_categorie";
-        $requete = $pdo->prepare($sql);
+        $requete = $pdo->prepare($sql);    
         $requete->execute(array(
             ":id_categorie" =>$id_categorie
         ));
@@ -164,7 +164,7 @@
      }
     
       // FONCTION QUI COMPTE LE NB D'OUTILS PAR RAPPORT A UNE CATEGORIE 
-     function countIdOutilCat(int $id_categorie){
+     function countIdOutilCat(int $id_categorie){ 
         $pdo = connexionBdd();
         $sql = "SELECT count(id_outil) FROM outil WHERE id_categorie = :id_categorie";
         $requete = $pdo->prepare($sql);
@@ -186,5 +186,17 @@
         ));
     }
 
+    // FONCTION QUI PERMET D'AFFICHER UN OUTIL PAR RAPPORT A ID DE LA OUTIL 
+    function outilById(int $id_outil){
+        $pdo = connexionBdd();
+        $sql = "SELECT outil.id_outil, outil.id_categorie, outil.nom_outil, outil.url_outil
+        FROM outil INNER JOIN categorie ON categorie.id_categorie = outil.id_categorie WHERE outil.id_outil = :id_outil;";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_outil' => $id_outil
+        ));
+        $resultat = $requete->fetch();
+        return $resultat;
+    }
 
 ?>
