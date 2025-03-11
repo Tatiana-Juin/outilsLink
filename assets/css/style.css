@@ -122,7 +122,8 @@
 
     /* margin-right: 18px; */
     
-    width:150px;
+    /* width:150px; */
+    width:10vw;
     padding: 4px; 
     border-radius:10px;
     border-color:#ffeeee;
@@ -150,7 +151,7 @@
     display:none;
     /* border:1px solid blue; */
     margin-left:15px;
-    /* flex-direction: column; */
+    flex-direction: column;
     /* margin-top: 20px; */
     
 }

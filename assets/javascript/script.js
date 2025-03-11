@@ -34,7 +34,7 @@ iconNavCards.forEach(icon =>{
         // recupere le menu avec index 
         const menu = document.getElementById(`menu-${index}`);
         // condition ternaire pour affiche / masuqer le menu
-        menu.style.display= menu.style.display === "block" ? "none" : "block";
+        menu.style.display= menu.style.display === "flex" ? "none" : "flex";
     } )
 })
 

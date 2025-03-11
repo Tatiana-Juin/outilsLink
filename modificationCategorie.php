@@ -87,7 +87,7 @@
             <!-- NOM D'UNE CATEGORIE -->
             <label for="nom_categorie" class="label-categorie">Nom categorie</label>
             <input type="text" name="nom_categorie"  class="nom-categorie" value="<?=$nomCategorie['nom_categorie']?>" >  
-            <input type="submit" value="Ajouter"  class="btn-categorie"> 
+            <input type="submit" value="Modifier"  class="btn-categorie"> 
         </form>
 
     

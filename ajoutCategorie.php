@@ -71,9 +71,9 @@
         <!-- AJOUT D'UN MESSAGE SI CELA EST UNE ERREUR -->
         <p class="echec"> <?= $info; ?></p> 
 
-        <form action="" method="POST" class="add_categorie">
+        <form action="" method="POST" class="add-categorie">
             <!-- NOM D'UNE CATEGORIE -->
-            <label for="nom_categorie" class="label_categorie">Nom categorie</label>
+            <label for="nom_categorie" class="label-categorie">Nom categorie</label>
             <input type="text" name="nom_categorie"  class="nom-categorie" >  
             <input type="submit" value="Ajouter"  class="btn-categorie"> 
         </form>
