@@ -143,7 +143,7 @@
     //  FONCTION POUR LA BARRE DE RECHERCHE 
     function searchOutil(string $outil){
         $pdo = connexionBdd();
-        $sql = "SELECT nom_outil,url_outil,nom_categorie FROM outil, categorie WHERE categorie.id_categorie = outil.id_categorie AND nom_outil LIKE :motCle";
+        $sql = "SELECT id_outil,nom_outil,url_outil,nom_categorie FROM outil, categorie WHERE categorie.id_categorie = outil.id_categorie AND nom_outil LIKE :motCle";
         $requete = $pdo->prepare($sql);
         $requete->execute(array(
             ':motCle' => "%$outil%"
