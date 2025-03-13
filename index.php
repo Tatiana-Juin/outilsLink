@@ -68,7 +68,7 @@
                             <!-- menu qui apparait lors du clique  -->
                             <div class="menu-hiden-card " id="menu-<?=$key?>">
                                 <a href="<?=RACINE_SITE?>modificationOutil.php?action=update&idOutil=<?= $allOutil['id_outil']; ?>" class="item-card">Modifier</a>
-                                <a href="#" class="item-card">Supprimer</a>
+                                <a href="<?=RACINE_SITE?>suppressionOutil.php?action=delete&idOutil=<?= $allOutil['id_outil']; ?>" class="item-card">Supprimer</a>
                             </div>
                              
                         </div>
