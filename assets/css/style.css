@@ -45,7 +45,7 @@
 }
 
 /* STYlE DU BOUTON */
- .btn-categorie,.btn-outil{
+ .btn-categorie,.btn-outil,.btn-oui-delete,.btn-non-delete{
     margin-top: 15px;
     width:150px;
     
@@ -208,6 +208,31 @@
     background-color: #ffeeee;
     margin-top: 10px;
     /* text-align: center; */
+}
+/* POUR LA DIV POP UP SUPPRESSION  */
+.confirmation-box{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    display:    none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+.confirmation-delete{
+    background-color: white;
+    padding:20px;
+    border-radius: 15px;
+    text-align: center;
+}
+/* STYLE UNIQUE POUR LE BTN OUI POUR LA SUPPRESSION OUTIL  */
+.btn-oui-delete{
+    margin-right: 15px;
 }
 
 /* **********************UNE CATEGORIE **************** */

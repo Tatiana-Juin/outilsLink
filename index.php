@@ -84,6 +84,16 @@
         
 
     </div>
+     
+    <!-- POP UP SUPPRESSION -->
+     <div class="confirmation-box">
+            
+        <div class="confirmation-delete">
+            <p> Es-tu sur de vouloir supprimer cette outil ? </p>
+            <button class="btn-oui-delete">Oui</button>
+            <button class="btn-non-delete">Non</button>
+        </div>
+     </div>
        
 </main>
 
