@@ -40,3 +40,19 @@ iconNavCards.forEach(icon =>{
 
 // ACTION QUAND ON CLIQUE SUR LE BOUTON HAMBURGER
 btnHamburger.addEventListener("click", funcMenuHamburger);
+
+// CHARGEMENT DES ELEMENT DU DOM POUR LA PAGE POP UP DE LA SUPPRESSION DE L'OUTIL
+let confirmationBox = document.querySelector(".confirmation-box");
+let formDelete = document.querySelector(".form-delete");
+let outilId = document.querySelector(".id_outil");
+let btnOuiDelete = document.querySelector(".btn-oui-delete");
+let btnNonDelete = document.querySelector(".btn-non-delete");
+let btnLinkDelete = document.querySelector("#btn-link-delete");
+let outilIdDelete = null;
+
+let funcDeleteOutil = (e) =>{
+    e.preventDefault();
+    // console.log("test");
+}
+
+btnLinkDelete.addEventListener("click",funcDeleteOutil);

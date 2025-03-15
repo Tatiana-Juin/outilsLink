@@ -68,10 +68,26 @@
                             <!-- menu qui apparait lors du clique  -->
                             <div class="menu-hiden-card " id="menu-<?=$key?>">
                                 <a href="<?=RACINE_SITE?>modificationOutil.php?action=update&idOutil=<?= $allOutil['id_outil']; ?>" class="item-card">Modifier</a>
-                                <a href="<?=RACINE_SITE?>suppressionOutil.php?action=delete&idOutil=<?= $allOutil['id_outil']; ?>" class="item-card">Supprimer</a>
+                                
+
+                                <a href="" class="item-card" id="btn-link-delete">Supprimer</a>
+
                             </div>
                              
                         </div>
+                        <!-- POP UP SUPPRESSION -->
+                        <div class="confirmation-box">
+                                
+                                <div class="confirmation-delete">
+                                    <p> Es-tu sur de vouloir supprimer cette outil ? </p>
+                                    <form action="suppressionOutil.php" class="form-delete" method="POST">
+                                        <input type="hidden"  name="id_outil" class="id_outil" value="<?=$allOutil['id_outil'] ?>">
+                                        <button class="btn-oui-delete">Oui</button>
+                                        <button class="btn-non-delete">Non</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
 
                     </div>
                     
@@ -85,15 +101,7 @@
 
     </div>
      
-    <!-- POP UP SUPPRESSION -->
-     <div class="confirmation-box">
-            
-        <div class="confirmation-delete">
-            <p> Es-tu sur de vouloir supprimer cette outil ? </p>
-            <button class="btn-oui-delete">Oui</button>
-            <button class="btn-non-delete">Non</button>
-        </div>
-     </div>
+    
        
 </main>
 

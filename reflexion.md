@@ -34,4 +34,6 @@ $_POST['outil'] = [
         'categorie' =>  // Nouvelle catégorie sélectionnée pour l'outil 3
     ]
 ];
+
+   <a href="<?=RACINE_SITE?>suppressionOutil.php?action=delete&idOutil=<?=  $allOutil['id_outil']; ?>" class="item-card" id="btn-link-delete">Supprimer</a>
 ````
