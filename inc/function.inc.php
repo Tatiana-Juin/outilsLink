@@ -211,4 +211,14 @@
             ':id_outil' => $id_outil
         )) ;
     }
+
+    // SUPRRESSION D'UN OUTIL
+    function deletOutilById(int $id_outil){
+        $pdo = connexionBdd();
+        $sql = "DELETE FROM outil WHERE id_outil = :id_outil";
+        $requete = $pdo->prepare($sql);
+        $requete->execute(array(
+            ':id_outil' => $id_outil 
+        ));
+    }
 ?>
