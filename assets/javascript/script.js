@@ -42,17 +42,57 @@ iconNavCards.forEach(icon =>{
 btnHamburger.addEventListener("click", funcMenuHamburger);
 
 // CHARGEMENT DES ELEMENT DU DOM POUR LA PAGE POP UP DE LA SUPPRESSION DE L'OUTIL
-let confirmationBox = document.querySelector(".confirmation-box");
+let confirmationBoxes = document.querySelectorAll(".confirmation-box");
 let formDelete = document.querySelector(".form-delete");
 let outilId = document.querySelector(".id_outil");
-let btnOuiDelete = document.querySelector(".btn-oui-delete");
-let btnNonDelete = document.querySelector(".btn-non-delete");
-let btnLinkDelete = document.querySelector("#btn-link-delete");
+let btnOuiDeletes = document.querySelectorAll(".btn-oui-delete");
+let btnNonDeletes = document.querySelectorAll(".btn-non-delete");
+let btnLinkDeletes = document.querySelectorAll("#btn-link-delete");
 let outilIdDelete = null;
 
-let funcDeleteOutil = (e) =>{
-    e.preventDefault();
-    // console.log("test");
-}
+btnLinkDeletes.forEach(btnLinkDelete => {
+    btnLinkDelete.addEventListener("click", (e) => {
+        e.preventDefault(); // Ajout de cette ligne
+        const idOutil = e.target.dataset.idOutil;
+        const confirmationBox = e.target.closest('.card').querySelector('.confirmation-box');
+        const idOutilInput = confirmationBox.querySelector('.id_outil');
 
-btnLinkDelete.addEventListener("click",funcDeleteOutil);
+        idOutilInput.value = idOutil;
+        confirmationBox.style.display = "block";
+    });
+});
+
+btnOuiDeletes.forEach(btnOuiDelete => {
+    btnOuiDelete.addEventListener("click", (e) => {
+        e.preventDefault();
+        const confirmationBox = e.target.closest('.confirmation-box');
+        const idOutil = confirmationBox.querySelector('.id_outil').value;
+        console.log("ID de l'outil à supprimer:", idOutil); // Ajouter ceci
+
+        fetch('suppressionOutil.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'id_outil=' + idOutil,
+        })
+        .then(response => {
+            if (response.ok) {
+                confirmationBox.closest('.card').remove();
+            } else {
+                alert('Erreur lors de la suppression.');
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+        });
+        confirmationBox.style.display = "none";
+    });
+});
+
+btnNonDeletes.forEach(btnNonDelete => {
+    btnNonDelete.addEventListener("click", (e) => {
+        const confirmationBox = e.target.closest('.confirmation-box');
+        confirmationBox.style.display = "none";
+    });
+});
