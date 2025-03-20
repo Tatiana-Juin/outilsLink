@@ -80,25 +80,9 @@
                              
                         </div>
 
-                        
+                 </div>
 
-                        <!-- POP UP SUPPRESSION -->
-                        <div class="confirmation-box">
-                                
-                                <div class="confirmation-delete">
-                                    <p> Es-tu sur de vouloir supprimer cette outil ? </p>
-                                    <form action="suppressionOutil.php" class="form-delete" method="POST">
-                                        <input type="hidden"  name="id_outil" class="id_outil" value="">
-                                        <button class="btn-oui-delete" >Oui</button>
-                                        <button class="btn-non-delete">Non</button>
-                                    </form>
-                                    
-                                </div>
-                            </div>
-
-                    </div>
-                    
-                    
+        
 
                 <?php 
                     } 
