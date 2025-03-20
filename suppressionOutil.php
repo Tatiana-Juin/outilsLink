@@ -10,7 +10,7 @@
         $idOutil = htmlentities($_GET['idOutil']);
 
         // RECUPERE LES INFORMATIONS DE L'OUTIL
-        $nomOutil = outilById($idOutil);
+        $informationOutil = outilById($idOutil);
 
         
        }
@@ -25,9 +25,10 @@
 
 
 <main>
+    <!-- titre de la page  -->
     <h1 class="title-page">Suppression de l'outils </h1>
 
-
+    <!-- mettre le btn suppression dans un form et en plus creer un input de type hidden pour recuperer id  -->
 </main>
 
 <?php 
