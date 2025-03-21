@@ -12,6 +12,8 @@
         // RECUPERE LES INFORMATIONS DE L'OUTIL
         $informationOutil = outilById($idOutil);
 
+        $idCategorie = $informationOutil['id_categorie'];
+        $informationCategorie = categorieById($idCategorie);
         
        }
         
@@ -24,11 +26,21 @@
 ?>
 
 
-<main>
+<main class="suppression-outil">
     <!-- titre de la page  -->
     <h1 class="title-page">Suppression de l'outils </h1>
 
     <!-- mettre le btn suppression dans un form et en plus creer un input de type hidden pour recuperer id  -->
+    <!-- info relative a l'outil  -->
+    <p class="info-outil"> Nom : <?=$informationOutil['nom_outil']?></p>
+    <p class="info-outil"> Categorie : <?=$informationCategorie['nom_categorie']?></p>
+
+    <!-- POUR LA SUPPRESION - BOUTON ETC  -->
+    <form action="" method="POST">
+        <input type="hidden" name="<?=$informationOutil['id_outil'] ?>" value="<?= $informationOutil['id_outil']?>">
+        <input type="submit" value="Supprimer" name="supprimer_outil" class="btn-outil">
+    </form>
+    
 </main>
 
 <?php 

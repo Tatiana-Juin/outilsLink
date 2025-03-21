@@ -8,7 +8,7 @@
 /***** *********PAGE AJOUT CATEGORIE ********************* *****/
 
 /* ELEMENT CONTENANT TOUTE LA PAGE  */
-.ajout-categorie,.ajout-outil,.modification-categorie,.suppression-categorie,.modification-outil{
+.ajout-categorie,.ajout-outil,.modification-categorie,.suppression-categorie,.modification-outil,.suppression-outil{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,6 +270,11 @@ table td {
     border: 1px solid #ccc;
     background-color: #ffeeee;
     cursor: pointer;
+}
+
+/* ***************** PAGE SUPPRESSION OUTIL  *************/
+.info-outil{
+   font-size: 20px;
 }
 
 
