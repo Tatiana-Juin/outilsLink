@@ -30,7 +30,7 @@
     <!-- titre de la page  -->
     <h1 class="title-page">Suppression de l'outils </h1>
 
-    <!-- mettre le btn suppression dans un form et en plus creer un input de type hidden pour recuperer id  -->
+   
     <!-- info relative a l'outil  -->
     <p class="info-outil"> Nom : <?=$informationOutil['nom_outil']?></p>
     <p class="info-outil"> Categorie : <?=$informationCategorie['nom_categorie']?></p>
